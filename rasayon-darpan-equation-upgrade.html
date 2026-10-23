@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a36">
+<title>রসায়ন দর্পণ · রাসায়নিক সংকেত অনুসন্ধান</title>
+<style>
+:root{--ink:#17213d;--muted:#66718b;--paper:#f5f7fc;--line:#e4e9f3;--blue:#4965f5;--cyan:#42d6cb;--violet:#8f75ff;--white:#fff;--green:#0e9c78;--shadow:0 20px 60px rgba(28,42,85,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif;line-height:1.65}button,input{font:inherit}button{cursor:pointer}.shell{max-width:1120px;margin:auto;padding:0 22px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 0;color:#fff}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.1px}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(140deg,var(--cyan),#7af0c2);color:#0d2241;font-size:23px;box-shadow:0 8px 20px #42d6cb35}.brand small{display:block;color:#b6c5ee;font-size:11px;font-weight:600;letter-spacing:1.1px}.top-pill{border:1px solid #ffffff35;border-radius:999px;padding:7px 12px;color:#dbe5ff;font-size:12px}.hero{background:radial-gradient(ellipse at 82% 10%,#6559e8 0,transparent 33%),radial-gradient(ellipse at 8% 90%,#126d91 0,transparent 35%),linear-gradient(125deg,#101a36,#1d2a5c 63%,#30377b);color:white;padding-bottom:72px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:410px;height:410px;border:1px solid #ffffff12;border-radius:50%;right:-150px;bottom:-255px;box-shadow:0 0 0 45px #ffffff08,0 0 0 95px #ffffff06;pointer-events:none}.hero-copy{max-width:780px;padding:36px 0 28px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#b6fff0;background:#ffffff0f;border:1px solid #ffffff22;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.4px}.pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px #42d6cb20}.hero h1{font-size:clamp(32px,5.5vw,58px);line-height:1.18;letter-spacing:-1.4px;margin:22px 0 14px;font-weight:850}.hero h1 span{background:linear-gradient(90deg,#69f0db,#b5b2ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:#d2dcfa;max-width:650px;margin:0;font-size:16px}.search-panel{position:relative;z-index:2;margin-top:18px;background:white;padding:11px;border:1px solid #ffffffa8;border-radius:22px;box-shadow:0 22px 55px #070d2c50}.search-row{display:flex;gap:10px;align-items:center}.search-icon{flex:none;width:44px;height:44px;display:grid;place-items:center;color:#6574a1}.search-icon svg{width:23px}.search-input{width:100%;border:0;outline:0;color:var(--ink);font-size:17px;min-width:0;padding:12px 0;background:transparent}.search-input::placeholder{color:#98a1b6}.search-btn{background:linear-gradient(130deg,var(--blue),#7c69f6);color:#fff;border:0;padding:13px 22px;border-radius:14px;font-weight:800;box-shadow:0 7px 16px #4965f533;white-space:nowrap}.search-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.search-help{padding:8px 10px 2px;font-size:12px;color:#8992a8}.suggestions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.suggestion{border:1px solid #ffffff35;color:#e0e8ff;background:#ffffff0d;border-radius:999px;padding:7px 12px;font-size:12px;transition:.2s}.suggestion:hover{background:#ffffff20;border-color:#ffffff75}.main{margin-top:-34px;position:relative;z-index:3;padding-bottom:60px}.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}.stat{padding:17px 20px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 24px #26396c08;display:flex;gap:13px;align-items:center}.stat-icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#edf0ff;color:#5267e7;font-size:20px;flex:none}.stat:nth-child(2) .stat-icon{background:#e6fbf7;color:#138f82}.stat:nth-child(3) .stat-icon{background:#f0eaff;color:#8766df}.stat strong{display:block;font-size:16px;line-height:1.4}.stat span{font-size:12px;color:var(--muted)}.content-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,.75fr);gap:22px;align-items:start}.card{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 8px 28px #26396c07;overflow:hidden}.result-card{min-height:350px}.card-head{padding:20px 23px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.head-label{font-size:12px;font-weight:800;color:#7b86a1;letter-spacing:1px;text-transform:uppercase}.head-title{font-size:18px;font-weight:850;margin-top:3px}.status-badge{font-size:11px;font-weight:800;color:#14876f;background:#e2faf3;border-radius:999px;padding:6px 10px;white-space:nowrap}.result-body{padding:24px}.empty-state{min-height:265px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px}.empty-illustration{width:82px;height:82px;border-radius:26px;background:linear-gradient(140deg,#edf0ff,#e4fffa);display:grid;place-items:center;font-size:38px;margin-bottom:14px}.empty-state h2{font-size:18px;margin:0 0 5px}.empty-state p{color:var(--muted);font-size:13px;max-width:370px;margin:0}.compound-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.compound-title{font-size:23px;font-weight:900;line-height:1.35;margin:0 0 7px}.compound-en{font-size:13px;color:var(--muted);margin-bottom:12px}.formula-box{min-width:112px;border:1px solid #dfe4ff;background:linear-gradient(145deg,#f5f6ff,#effffc);border-radius:16px;padding:12px 15px;text-align:center}.formula-label{font-size:10px;font-weight:800;color:#7380a7;letter-spacing:1px}.formula{font-size:29px;font-weight:850;color:#4359df;line-height:1.4;white-space:nowrap}.tag-row{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0 21px}.tag{font-size:11px;border-radius:999px;padding:5px 10px;background:#f0f3fa;color:#64708c;font-weight:700}.detail-section{margin-top:20px}.section-title{font-weight:850;font-size:14px;display:flex;align-items:center;gap:9px;margin:0 0 12px}.section-title:before{content:"";display:block;width:4px;height:19px;border-radius:4px;background:linear-gradient(var(--blue),var(--cyan))}.composition-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.element-chip{border:1px solid #e6eaf4;background:#fbfcff;border-radius:15px;padding:12px}.el-top{display:flex;gap:8px;align-items:center}.el-symbol{width:37px;height:37px;border-radius:11px;background:#e9edff;color:#4159d9;display:grid;place-items:center;font-weight:900;font-size:15px;flex:none}.element-chip:nth-child(3n+2) .el-symbol{background:#e0fbf5;color:#128b78}.element-chip:nth-child(3n) .el-symbol{background:#f1eaff;color:#8057cc}.el-name{font-weight:800;font-size:13px}.el-count{color:var(--muted);font-size:11px}.explain-box{background:#f7f8ff;border:1px solid #e5e9ff;border-radius:16px;padding:15px 16px;font-size:13px;color:#596581}.formula-line{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:8px 0 2px;font-weight:800;color:#303f91}.formula-line .plus{color:#a1abc4}.info-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.info-box{padding:13px 14px;border:1px solid #e8ebf4;border-radius:14px}.info-label{font-size:11px;color:#8993a9;margin-bottom:4px}.info-value{font-size:14px;font-weight:800}.note{font-size:11px;color:#8790a6;margin-top:17px}.side-stack{display:grid;gap:17px}.side-card{padding:20px}.side-title{font-weight:850;font-size:15px;margin:0 0 14px;display:flex;align-items:center;gap:9px}.side-title span{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:#eff1ff}.quick-list{display:grid;gap:8px}.quick-item{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;border:1px solid #e9edf5;background:white;padding:11px 12px;border-radius:13px;text-align:left;transition:.18s}.quick-item:hover{background:#f6f8ff;border-color:#cbd3ff;transform:translateX(2px)}.quick-name{font-size:12px;font-weight:750;color:#53607f}.quick-formula{font-size:13px;font-weight:900;color:#465ee4;white-space:nowrap}.guide-list{padding:0;margin:0;list-style:none;display:grid;gap:12px}.guide-list li{display:grid;grid-template-columns:27px 1fr;gap:10px;font-size:12px;color:#65708a}.num{width:26px;height:26px;border-radius:9px;background:#eff1ff;color:#5162dc;display:grid;place-items:center;font-weight:900;font-size:11px}.guide-list b{display:block;color:#283553;font-size:12px;margin-bottom:2px}.warning{background:#fff9eb;border:1px solid #f4e6b9;color:#79643a;border-radius:14px;padding:12px;font-size:11px;margin-top:16px}.footer{border-top:1px solid var(--line);padding:25px 0 35px;color:#7f89a0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.footer b{color:#3a4664}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#17213d;color:white;border-radius:13px;padding:11px 16px;font-size:13px;box-shadow:var(--shadow);transition:.25s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}.hidden{display:none!important}.search-count{font-size:11px;color:#8b95ab}.match-list{display:grid;gap:8px;margin-top:18px}.match-item{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;padding:12px 14px;border-radius:14px;border:1px solid #e6eaf4;background:#fff}.match-item:hover{border-color:#bdc8ff;background:#fafaff}.match-name{font-size:13px;font-weight:800}.match-meta{color:#8690a8;font-size:11px}.match-formula{font-size:14px;font-weight:900;color:#4b5fdf;white-space:nowrap}.result-empty{color:var(--muted);text-align:center;padding:34px 12px}.result-empty strong{display:block;color:var(--ink);font-size:16px;margin-bottom:6px}.search-tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.mini-btn{border:1px solid #dfe4f2;background:#fff;color:#5d6883;padding:6px 9px;border-radius:9px;font-size:11px}.mini-btn:hover{background:#f5f7ff}.chem{font-family:ui-serif,Georgia,serif;letter-spacing:.1px}.chem sub{font-size:.65em;vertical-align:sub}.print-button{border:1px solid #e1e6f1;color:#67728c;background:#fff;border-radius:10px;padding:7px 10px;font-size:11px;font-weight:750}
+@media(max-width:820px){.content-grid{grid-template-columns:1fr}.side-stack{grid-template-columns:1fr 1fr}.stat{padding:14px}.stat-row{gap:9px}.stat-icon{width:36px;height:36px}.hero{padding-bottom:60px}}
+@media(max-width:580px){.shell{padding:0 14px}.topbar{padding:15px 0}.top-pill{font-size:10px}.hero-copy{padding:29px 0 20px}.hero h1{letter-spacing:-.7px}.hero p{font-size:14px}.search-panel{padding:8px;border-radius:18px}.search-row{gap:5px}.search-icon{width:31px}.search-input{font-size:14px;padding:10px 0}.search-btn{padding:11px 13px;font-size:13px}.stat-row{grid-template-columns:1fr;gap:8px}.stat{padding:11px 14px}.stat-icon{width:34px;height:34px}.stat span{font-size:11px}.main{margin-top:-26px}.card-head{padding:17px}.result-body{padding:17px}.compound-head{flex-direction:column-reverse}.formula-box{align-self:flex-start;min-width:95px;padding:7px 13px}.formula{font-size:25px}.compound-title{font-size:21px}.side-stack{grid-template-columns:1fr}.info-row{grid-template-columns:1fr 1fr}.suggestion{padding:6px 9px}.footer-inner{display:block}.footer-inner span{display:block;margin:3px 0}}
+@media print{body{background:#fff}.hero{background:#fff;color:#111;padding-bottom:20px}.topbar,.search-panel,.suggestions,.stat-row,.side-stack,.footer,.print-button{display:none!important}.hero-copy{padding:10px 0}.hero h1,.hero p{color:#111}.main{margin:0}.content-grid{display:block}.card{box-shadow:none;border:1px solid #ddd}.result-card{min-height:0}.formula{color:#111}.card-head{padding:10px}.result-body{padding:15px}}
+
+/* Chemistry Darpan accessible dark mode */
+:root{color-scheme:dark;--ink:#f4f7ff;--muted:#b4bfd7;--paper:#080d18;--line:#29344b;--blue:#8194ff;--cyan:#4de3d2;--violet:#b19aff;--white:#101827;--green:#51d6ad;--shadow:0 20px 60px rgba(0,0,0,.32)}
+html,body{background:#080d18!important;color:#f4f7ff!important}
+input,textarea,select,[contenteditable="true"]{background:#05080f!important;color:#fff!important;border-color:#3a4762!important;caret-color:#65f0dc!important}
+input::placeholder,textarea::placeholder{color:#9aa8c3!important;opacity:1}
+.search-panel{background:#0d1423!important;border-color:#33415c!important}
+.search-input{background:#05080f!important;color:#fff!important;border-radius:10px;padding-left:12px!important}
+.search-icon{color:#91a5ff!important}.search-help{color:#b1bdd5!important}
+.stat,.card,.side-card,.quick-item,.match-item,.mini-btn,.print-button{background:#111a2b!important;color:#f2f5ff!important;border-color:#2b3852!important;box-shadow:0 8px 24px rgba(0,0,0,.18)!important}
+.card-head{background:#121c2e!important;border-bottom-color:#2b3852!important}
+.head-label,.stat span,.compound-en,.note,.info-label,.match-meta,.search-count{color:#b3bfd8!important}
+.head-title,.compound-title,.section-title,.stat strong,.el-name,.info-value,.side-title,.guide-list b,.match-name,.result-empty strong{color:#f4f7ff!important}
+.empty-illustration{background:#17253a!important}.empty-state p,.result-empty{color:#b8c4dc!important}
+.formula-box{background:#101d31!important;border-color:#42527a!important}.formula{color:#a9b6ff!important}.formula-label{color:#b7c5e5!important}
+.tag{background:#202b40!important;color:#d6def4!important}
+.element-chip{background:#111b2b!important;border-color:#2b3b53!important}
+.el-symbol{background:#26345f!important;color:#c2cbff!important}
+.element-chip:nth-child(3n+2) .el-symbol{background:#123b39!important;color:#8ff3df!important}
+.element-chip:nth-child(3n) .el-symbol{background:#34234f!important;color:#e0c8ff!important}
+.el-count{color:#b8c5dc!important}
+.explain-box{background:#121e31!important;border-color:#2d3d5b!important;color:#e2e9fa!important}
+.formula-line{color:#c0c9ff!important}.formula-line .plus{color:#91a0c2!important}
+.info-box{background:#101a2a!important;border-color:#2a3952!important}
+.quick-item:hover,.match-item:hover,.mini-btn:hover{background:#1a2941!important;border-color:#7186ff!important}
+.quick-name{color:#d7e0f6!important}.quick-formula,.match-formula{color:#b2beff!important}
+.side-title span,.num,.stat-icon{background:#25345b!important;color:#c5ceff!important}
+.stat:nth-child(2) .stat-icon{background:#123c38!important;color:#8ef2dc!important}
+.stat:nth-child(3) .stat-icon{background:#35254f!important;color:#e0c7ff!important}
+.guide-list li{color:#bac6df!important}.status-badge{background:#123c35!important;color:#83f0d0!important}
+.warning{background:#382d16!important;border-color:#6c5527!important;color:#ffe0a0!important}
+.footer{border-color:#29344b!important;color:#aab7d0!important}.footer b{color:#edf2ff!important}
+.mini-btn,.print-button{color:#dce5fa!important}.toast{background:#24314c!important;color:#fff!important}
+.suggestion{background:#121e31!important;color:#e5ebff!important;border-color:#394866!important}
+.suggestion:hover{background:#1b2a43!important}
+@media print{body{background:#fff!important;color:#111!important}}
+
+</style>
+
+<meta name="application-name" content="রসায়ন দর্পণ">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+
+
+<style id="chemistry-darpan-final-contrast">
+:root{color-scheme:dark}
+html,body{background:#080d18!important;color:#f4f7ff!important}
+input,textarea,select{background:#05080f!important;color:#fff!important;border:1px solid #3a4762!important}
+input::placeholder,textarea::placeholder{color:#9aa8c3!important;opacity:1}
+.card,.stat,.side-card,.quick-item,.match-item,.explain-box,.info-box{background:#111a2b!important;color:#f4f7ff!important;border-color:#2b3852!important}
+.head-title,.compound-title,.section-title,.el-name,.info-value,.match-name{color:#f4f7ff!important}
+.note,.head-label,.compound-en,.info-label,.match-meta,.guide-list li{color:#b4bfd7!important}
+.formula,.quick-formula,.match-formula{color:#a9b6ff!important}
+.element-chip:nth-child(3n+1) .el-symbol{background:#26345f!important;color:#c2cbff!important}
+.element-chip:nth-child(3n+2) .el-symbol{background:#123b39!important;color:#8ff3df!important}
+.element-chip:nth-child(3n) .el-symbol{background:#34234f!important;color:#e0c8ff!important}
+#balanceResult{color:#f4f7ff!important;background:#0d1728!important}
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <div class="shell">
+    <div class="topbar">
+      <div class="brand"><div class="logo">⚗</div><div>রসায়ন দর্পণ<small>CHEMISTRY • BANGLA EXPLORER</small></div></div>
+      <div class="top-pill">✦ শিক্ষার্থীদের জন্য তৈরি</div>
+    </div>
+    <div class="hero-copy">
+      <div class="eyebrow"><i class="pulse"></i> রাসায়নিক সংকেত বুঝি, মুখস্থ নয়</div>
+      <h1>বাংলায় খুঁজুন।<br><span>সংকেতের গঠন বুঝুন।</span></h1>
+      <p>নাম ভুল বা অগোছালো লিখলেও পরিচিত যৌগ খুঁজে দেখুন। সঠিক সংকেত, বাংলা নাম, কোন মৌল কয়টি আছে এবং সংকেতটি কীভাবে গঠিত হয়েছে, সব এক জায়গায়।</p>
+    </div>
+    <section class="search-panel" aria-label="রাসায়নিক পদার্থ খুঁজুন">
+      <div class="search-row">
+        <div class="search-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5" stroke-linecap="round"/></svg></div>
+        <input id="searchInput" class="search-input" type="search" autocomplete="off" spellcheck="false" placeholder="যেমন: ম্যাঙ্গানিজ ডাই অক্সাইড, চুন, nh4cl…" aria-label="রাসায়নিক নাম বা সংকেত লিখুন">
+        <button class="search-btn" id="searchBtn">খুঁজুন ↗</button>
+      </div>
+      <div class="search-help">বাংলা নাম • ইংরেজি নাম • রাসায়নিক সংকেত • প্রচলিত নাম দিয়ে খুঁজুন</div>
+    </section>
+    <div class="suggestions" aria-label="দ্রুত অনুসন্ধান">
+      <button class="suggestion" data-query="ম্যাঙ্গানিজ ডাই অক্সাইড">MnO₂</button>
+      <button class="suggestion" data-query="অ্যামোনিয়াম ক্লোরাইড">NH₄Cl</button>
+      <button class="suggestion" data-query="খাবার লবণ">NaCl</button>
+      <button class="suggestion" data-query="চুন">CaO</button>
+      <button class="suggestion" data-query="পটাশিয়াম ক্লোরেট">KClO₃</button>
+      <button class="suggestion" data-query="পানি">H₂O</button>
+    </div>
+  </div>
+</header>
+<main class="shell main">
+  <section class="stat-row" aria-label="সাইটের বৈশিষ্ট্য">
+    <div class="stat"><div class="stat-icon">⌕</div><div><strong>সহজ অনুসন্ধান</strong><span>নাম বা সংকেত লিখুন</span></div></div>
+    <div class="stat"><div class="stat-icon">⚛</div><div><strong>মৌলভিত্তিক বিশ্লেষণ</strong><span>প্রতিটি পরমাণুর হিসাব</span></div></div>
+    <div class="stat"><div class="stat-icon">✓</div><div><strong>পড়াশোনার উপযোগী</strong><span>সহজ বাংলায় ব্যাখ্যা</span></div></div>
+  </section>
+  <div class="content-grid">
+    <section class="card result-card" aria-live="polite">
+      <div class="card-head"><div><div class="head-label">রাসায়নিক পরিচয়</div><div class="head-title" id="resultHeading">আপনার ফলাফল এখানে</div></div><button class="print-button" id="printBtn">⤓ প্রিন্ট / PDF</button></div>
+      <div id="resultBody" class="result-body">
+        <div class="empty-state"><div class="empty-illustration">⚗️</div><h2>কোন রাসায়নিক পদার্থটি জানতে চান?</h2><p>উপরের সার্চবারে নাম বা সংকেত লিখুন। যেমন, “অ্যামোনিয়াম ক্লোরাইড” বা “NH4Cl”। চাইলে নিচের জনপ্রিয় পদার্থগুলোও খুলে দেখতে পারেন।</p></div>
+      </div>
+    </section>
+    <aside class="side-stack">
+      <section class="card side-card"><h2 class="side-title"><span>✧</span> জনপ্রিয় অনুসন্ধান</h2><div class="quick-list" id="quickList"></div></section>
+      <section class="card side-card"><h2 class="side-title"><span>☷</span> কীভাবে ব্যবহার করবেন</h2><ol class="guide-list"><li><span class="num">01</span><div><b>নাম বা সংকেত লিখুন</b>বানান ভুল হলেও পরিচিত নামের কাছাকাছি মিল খোঁজার চেষ্টা করবে।</div></li><li><span class="num">02</span><div><b>সঠিক ফলটি বাছুন</b>একাধিক মিল পেলে তালিকা থেকে উপযুক্ত পদার্থটি খুলুন।</div></li><li><span class="num">03</span><div><b>গঠন ও সংখ্যা বুঝুন</b>প্রতিটি মৌলের প্রতীক, পরমাণুর সংখ্যা ও সংকেত গঠনের ব্যাখ্যা দেখুন।</div></li></ol><div class="warning">শিক্ষামূলক নোট: এখানে পরিচিত যৌগের একটি অফলাইন তালিকা আছে। সব সম্ভাব্য রাসায়নিক পদার্থ এই তালিকায় নেই। অচেনা সংকেতের মৌলভিত্তিক গঠন শনাক্ত হতে পারে, কিন্তু নাম যাচাই ছাড়া নিশ্চিত বলা হবে না।</div></section>
+    </aside>
+  </div>
+
+  <section class="card" id="reactionLibrary" style="margin-top:22px;overflow:hidden">
+    <div class="card-head"><div><div class="head-label">Reaction lab · অফলাইন ডেটাবেস</div><div class="head-title">রাসায়নিক বিক্রিয়া, সূত্র ও ব্যতিক্রম</div></div><span class="status-badge" id="reactionCount">লোড হচ্ছে…</span></div>
+    <div class="result-body">
+      <p style="margin:0 0 14px;color:#697590;font-size:13px">বিক্রিয়ার নাম, কোনো বিক্রিয়ক/উৎপাদ, বা সমীকরণের অংশ লিখুন। একাধিক মিল পেলে সম্ভাব্য ফল বেছে নিন। এখানে সাধারণ পাঠ্যবই-ভিত্তিক বিক্রিয়া, সমীকরণ সাম্যাবস্থা, এবং মনে রাখার মতো কয়েকটি ব্যতিক্রম রাখা হয়েছে।</p>
+      <div class="search-panel" style="margin:0;border-color:#e4e9f3;box-shadow:none;padding:8px"><div class="search-row"><div class="search-icon">⚗️</div><input id="reactionInput" class="search-input" placeholder="যেমন: বিয়োজন, CaCO3, অক্সিজেন, নিরপেক্ষকরণ…" autocomplete="off"><button class="search-btn" id="reactionSearchBtn">খুঁজুন</button></div></div>
+      <div id="reactionResults" class="match-list"><div class="result-empty"><strong>বিক্রিয়ার লাইব্রেরি প্রস্তুত</strong>কোনো বিষয় লিখে অনুসন্ধান করুন অথবা নিচের নিয়ম ও ব্যতিক্রমগুলো পড়ুন।</div></div>
+      <div class="detail-section"><h3 class="section-title">বিক্রিয়া লেখার মূল নিয়ম</h3><div class="composition-grid">
+        <div class="element-chip"><div class="el-name">১. ভর সংরক্ষণ</div><div class="el-count">সমীকরণের দুই পাশে প্রতিটি মৌলের পরমাণুর সংখ্যা সমান হতে হবে।</div></div>
+        <div class="element-chip"><div class="el-name">২. সঠিক সংকেত</div><div class="el-count">আগে যৌগের সঠিক রাসায়নিক সংকেত লিখুন, তারপর সহগ বসিয়ে সাম্য করুন।</div></div>
+        <div class="element-chip"><div class="el-name">৩. সহগ বদলান</div><div class="el-count">সাম্য করার সময় সূত্রের নিচের সংখ্যা বদলাবেন না; শুধু সূত্রের আগে সহগ দিন।</div></div>
+        <div class="element-chip"><div class="el-name">৪. শর্ত উল্লেখ</div><div class="el-count">তাপ, আলো, অনুঘটক, দ্রবণ বা গ্যাসের অবস্থা প্রাসঙ্গিক হলে লিখুন।</div></div>
+      </div></div>
+      <div class="detail-section"><h3 class="section-title">সাধারণ ব্যতিক্রম ও সতর্কতা</h3><div class="quick-list" id="exceptionList"></div><div class="warning">এটি বাছাই করা শিক্ষামূলক ডেটাবেস, সর্বজ্ঞানী রাসায়নিক ডেটাবেস নয়। কাছাকাছি বানান থেকে পাওয়া ফল অনুমানমাত্র হতে পারে। গুরুত্বপূর্ণ উত্তর, অস্বাভাবিক যৌগ, জারণ অবস্থা ও বাস্তব পরীক্ষার শর্ত পাঠ্যবই/বিশ্বস্ত উৎসে মিলিয়ে নিন। বিপজ্জনক রাসায়নিক মেশানো বা উত্তপ্ত করার নির্দেশ হিসেবে সমীকরণ ব্যবহার করবেন না।</div></div>
+      <div class="note">ডেটাবেস সীমা: ১০,০০০ রেকর্ডের মধ্যে রাখার জন্য অনুসন্ধান লাইব্রেরি নির্দিষ্টভাবে সীমাবদ্ধ। এই ফাইল সম্পূর্ণ অফলাইনে চলে; বাইরের সার্ভারে প্রশ্ন পাঠায় না।</div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="footer-inner"><span><b>রসায়ন দর্পণ</b> · শেখার জন্য তৈরি একটি একক HTML টুল</span><span>অফলাইনে চলে · কোনো অ্যাকাউন্ট বা API প্রয়োজন নেই</span><span>রাসায়নিক তথ্য শিক্ষামূলক উদ্দেশ্যে</span></div></footer>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+'use strict';
+const ELEMENTS={
+ H:{bn:'হাইড্রোজেন',en:'Hydrogen',mass:1.008,z:1},He:{bn:'হিলিয়াম',en:'Helium',mass:4.003,z:2},Li:{bn:'লিথিয়াম',en:'Lithium',mass:6.94,z:3},Be:{bn:'বেরিলিয়াম',en:'Beryllium',mass:9.012,z:4},B:{bn:'বোরন',en:'Boron',mass:10.81,z:5},C:{bn:'কার্বন',en:'Carbon',mass:12.011,z:6},N:{bn:'নাইট্রোজেন',en:'Nitrogen',mass:14.007,z:7},O:{bn:'অক্সিজেন',en:'Oxygen',mass:15.999,z:8},F:{bn:'ফ্লোরিন',en:'Fluorine',mass:18.998,z:9},Ne:{bn:'নিয়ন',en:'Neon',mass:20.180,z:10},Na:{bn:'সোডিয়াম',en:'Sodium',mass:22.990,z:11},Mg:{bn:'ম্যাগনেসিয়াম',en:'Magnesium',mass:24.305,z:12},Al:{bn:'অ্যালুমিনিয়াম',en:'Aluminium',mass:26.982,z:13},Si:{bn:'সিলিকন',en:'Silicon',mass:28.085,z:14},P:{bn:'ফসফরাস',en:'Phosphorus',mass:30.974,z:15},S:{bn:'সালফার (গন্ধক)',en:'Sulfur',mass:32.06,z:16},Cl:{bn:'ক্লোরিন',en:'Chlorine',mass:35.45,z:17},Ar:{bn:'আর্গন',en:'Argon',mass:39.948,z:18},K:{bn:'পটাশিয়াম',en:'Potassium',mass:39.098,z:19},Ca:{bn:'ক্যালসিয়াম',en:'Calcium',mass:40.078,z:20},Cr:{bn:'ক্রোমিয়াম',en:'Chromium',mass:51.996,z:24},Mn:{bn:'ম্যাঙ্গানিজ',en:'Manganese',mass:54.938,z:25},Fe:{bn:'লোহা (আয়রন)',en:'Iron',mass:55.845,z:26},Co:{bn:'কোবাল্ট',en:'Cobalt',mass:58.933,z:27},Ni:{bn:'নিকেল',en:'Nickel',mass:58.693,z:28},Cu:{bn:'তামা (কপার)',en:'Copper',mass:63.546,z:29},Zn:{bn:'দস্তা (জিঙ্ক)',en:'Zinc',mass:65.38,z:30},Br:{bn:'ব্রোমিন',en:'Bromine',mass:79.904,z:35},Ag:{bn:'রুপা (সিলভার)',en:'Silver',mass:107.868,z:47},I:{bn:'আয়োডিন',en:'Iodine',mass:126.904,z:53},Ba:{bn:'বেরিয়াম',en:'Barium',mass:137.327,z:56},Hg:{bn:'পারদ',en:'Mercury',mass:200.592,z:80},Pb:{bn:'সিসা',en:'Lead',mass:207.2,z:82}
+};
+const COMPOUNDS=[
+{f:'H2O',bn:'পানি',en:'Water',alias:['জল','পানী','water','হাইড্রোজেন অক্সাইড'],type:'যৌগ',desc:'দুটি হাইড্রোজেন পরমাণু ও একটি অক্সিজেন পরমাণু দিয়ে পানির একটি অণু গঠিত।',use:'পান করা, দ্রাবক ও জীবনের জন্য অপরিহার্য।',kind:'অণু',reaction:'2H₂ + O₂ → 2H₂O'},
+{f:'NaCl',bn:'সোডিয়াম ক্লোরাইড',en:'Sodium chloride',alias:['খাবার লবণ','খাওয়ার লবন','লবণ','লবন','table salt','common salt','সোডিয়াম ক্লোরাইড'],type:'আয়নিক যৌগ',desc:'সোডিয়াম ও ক্লোরিন থেকে ১:১ অনুপাতে গঠিত; এতে Na⁺ ও Cl⁻ আয়ন থাকে।',use:'খাদ্য লবণ ও রাসায়নিক শিল্পে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2Na + Cl₂ → 2NaCl'},
+{f:'NH4Cl',bn:'অ্যামোনিয়াম ক্লোরাইড',en:'Ammonium chloride',alias:['অ্যামোনিয়াম ক্লোরাইড','এমোনিয়াম ক্লোরাইড','অ্যামোনিয়াম ক্লোরাইডের সংকেত','ammonium chloride','নিশাদল','নিশাদল লবণ'],type:'আয়নিক যৌগ',desc:'একটি অ্যামোনিয়াম আয়ন (NH₄⁺) ও একটি ক্লোরাইড আয়ন (Cl⁻) দিয়ে গঠিত।',use:'ব্যাটারি, পরীক্ষাগার ও কিছু শিল্পপ্রক্রিয়ায় ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'NH₄Cl ⇌ NH₃ + HCl (উত্তাপে বাষ্পীয় বিচ্ছেদ) '},
+{f:'MnO2',bn:'ম্যাঙ্গানিজ ডাই-অক্সাইড',en:'Manganese dioxide',alias:['ম্যাঙ্গানিজ ডাই অক্সাইড','ম্যাঙ্গানিজ ডাইঅক্সাইড','ম্যাঙ্গানিজ অক্সাইড','manganese dioxide','mno2','এম এন ও টু'],type:'অক্সাইড',desc:'একটি ম্যাঙ্গানিজ পরমাণু ও দুটি অক্সিজেন পরমাণু দিয়ে গঠিত।',use:'শুষ্ক কোষে এবং কিছু বিক্রিয়ায় অনুঘটক হিসেবে ব্যবহৃত হয়।',kind:'যৌগ',reaction:'2KClO₃ —(তাপ, MnO₂ অনুঘটক)→ 2KCl + 3O₂'},
+{f:'KClO3',bn:'পটাশিয়াম ক্লোরেট',en:'Potassium chlorate',alias:['পটাশিয়াম ক্লোরেট','পটাশিয়াম ক্লোরেট','পটাশিয়াম ক্লোরাইড নয়','potassium chlorate','kclo3'],type:'লবণ',desc:'একটি K, একটি Cl এবং তিনটি O পরমাণু থাকে।',use:'ল্যাবরেটরিতে নিয়ন্ত্রিত অবস্থায় অক্সিজেন প্রস্তুতির উদাহরণ হিসেবে পড়ানো হয়।',kind:'যৌগ',reaction:'2KClO₃ —(তাপ, MnO₂)→ 2KCl + 3O₂',caution:'পটাশিয়াম ক্লোরেট একটি শক্তিশালী জারক; ঘরে তৈরি বা উত্তপ্ত করার চেষ্টা করবেন না।'},
+{f:'CaO',bn:'ক্যালসিয়াম অক্সাইড',en:'Calcium oxide',alias:['চুন','পোড়া চুন','কুইকলাইম','quicklime','ক্যালসিয়াম অক্সাইড','ক্যালসিয়াম অক্সাইডের সংকেত'],type:'ধাতব অক্সাইড',desc:'একটি ক্যালসিয়াম ও একটি অক্সিজেন পরমাণু; আয়নিকভাবে Ca²⁺ ও O²⁻।',use:'নির্মাণশিল্প, সিমেন্ট ও অম্লীয় পদার্থ নিরপেক্ষ করতে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'CaCO₃ —(তাপ)→ CaO + CO₂',caution:'পানির সঙ্গে বিক্রিয়ায় প্রচুর তাপ উৎপন্ন হয়; সরাসরি হাতে ধরবেন না।'},
+{f:'Ca(OH)2',bn:'ক্যালসিয়াম হাইড্রক্সাইড',en:'Calcium hydroxide',alias:['নেভানো চুন','নিভানো চুন','slaked lime','slaked lime water','ক্যালসিয়াম হাইড্রোক্সাইড','ক্যালসিয়াম হাইড্রক্সাইড','চুনের পানি'],type:'ক্ষার',desc:'একটি Ca²⁺ আয়নের সঙ্গে দুটি হাইড্রক্সাইড (OH⁻) আয়ন থাকে। তাই O ও H-এর সংখ্যা দুইটি করে।',use:'চুনের পানি, নির্মাণকাজ ও অম্ল নিরপেক্ষকরণে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'CaO + H₂O → Ca(OH)₂'},
+{f:'CaCO3',bn:'ক্যালসিয়াম কার্বনেট',en:'Calcium carbonate',alias:['চুনাপাথর','খড়ি','খড়ি','মার্বেল','limestone','chalk','marble','ক্যালসিয়াম কার্বোনেট'],type:'কার্বনেট লবণ',desc:'একটি Ca²⁺ আয়ন ও একটি কার্বনেট (CO₃²⁻) আয়ন: মোট Ca ১, C ১, O ৩।',use:'চুনাপাথর, খড়ি, মার্বেল ও সিমেন্ট তৈরিতে গুরুত্বপূর্ণ।',kind:'আয়নিক যৌগ',reaction:'CaCO₃ —(তাপ)→ CaO + CO₂'},
+{f:'CaCO3',bn:'ক্যালসিয়াম কার্বনেট',en:'Calcium carbonate',alias:['ক্যালসিয়াম কার্বোনেট'],type:'কার্বনেট লবণ',desc:'একটি Ca²⁺ আয়ন ও একটি কার্বনেট (CO₃²⁻) আয়ন: মোট Ca ১, C ১, O ৩।',use:'চুনাপাথর, খড়ি, মার্বেল ও সিমেন্ট তৈরিতে গুরুত্বপূর্ণ।',kind:'আয়নিক যৌগ',reaction:'CaCO₃ —(তাপ)→ CaO + CO₂'},
+{f:'CaCO3',bn:'ক্যালসিয়াম কার্বনেট',en:'Calcium carbonate',alias:['চুনাপাথর','খড়ি','limestone','chalk','মার্বেল','marble'],type:'কার্বনেট লবণ',desc:'একটি Ca²⁺ আয়ন ও একটি কার্বনেট (CO₃²⁻) আয়ন: মোট Ca ১, C ১, O ৩।',use:'চুনাপাথর, খড়ি, মার্বেল ও সিমেন্ট তৈরিতে গুরুত্বপূর্ণ।',kind:'আয়নিক যৌগ',reaction:'CaCO₃ —(তাপ)→ CaO + CO₂'},
+{f:'CO2',bn:'কার্বন ডাই-অক্সাইড',en:'Carbon dioxide',alias:['কার্বন ডাই অক্সাইড','কার্বনডাইঅক্সাইড','কার্বন ডাই অক্সাইড গ্যাস','carbon dioxide','কার্বন ডাইঅক্সাইড'],type:'অক্সাইড',desc:'একটি কার্বন ও দুটি অক্সিজেন পরমাণু দিয়ে একটি অণু গঠিত।',use:'সালোকসংশ্লেষ, অগ্নিনির্বাপক যন্ত্র ও কার্বনেটেড পানীয়তে গুরুত্বপূর্ণ।',kind:'সমযোজী অণু',reaction:'C + O₂ → CO₂'},
+{f:'CO',bn:'কার্বন মনোক্সাইড',en:'Carbon monoxide',alias:['কার্বন মনো অক্সাইড','carbon monoxide'],type:'অক্সাইড',desc:'একটি কার্বন ও একটি অক্সিজেন পরমাণু দিয়ে গঠিত।',use:'কিছু শিল্পপ্রক্রিয়ায় ব্যবহৃত হয়। এটি বিষাক্ত গ্যাস।',kind:'সমযোজী অণু',reaction:'2C + O₂ → 2CO',caution:'কার্বন মনোক্সাইড বর্ণহীন, গন্ধহীন ও অত্যন্ত বিষাক্ত।'},
+{f:'O2',bn:'অক্সিজেন',en:'Oxygen',alias:['অক্সিজেন গ্যাস','অক্সিজেনের সংকেত','oxygen gas'],type:'মৌলিক পদার্থ',desc:'সাধারণ অবস্থায় অক্সিজেন গ্যাসের একটি অণুতে দুটি O পরমাণু থাকে।',use:'শ্বসন ও দহনে প্রয়োজন হয়।',kind:'দ্বিপরমাণুক অণু',reaction:'2H₂O₂ → 2H₂O + O₂ (উপযুক্ত অনুঘটকে)'},
+{f:'H2',bn:'হাইড্রোজেন',en:'Hydrogen',alias:['হাইড্রোজেন গ্যাস','hydrogen gas'],type:'মৌলিক পদার্থ',desc:'হাইড্রোজেন গ্যাসের একটি অণুতে দুটি H পরমাণু থাকে।',use:'জ্বালানি ও রাসায়নিক শিল্পে ব্যবহার আছে।',kind:'দ্বিপরমাণুক অণু',reaction:'2H₂ + O₂ → 2H₂O'},
+{f:'N2',bn:'নাইট্রোজেন',en:'Nitrogen',alias:['নাইট্রোজেন গ্যাস','nitrogen gas'],type:'মৌলিক পদার্থ',desc:'নাইট্রোজেন গ্যাসের একটি অণুতে দুটি N পরমাণু থাকে।',use:'বায়ুমণ্ডলের প্রধান গ্যাস; সার উৎপাদনে গুরুত্বপূর্ণ।',kind:'দ্বিপরমাণুক অণু',reaction:'N₂ + 3H₂ ⇌ 2NH₃'},
+{f:'NH3',bn:'অ্যামোনিয়া',en:'Ammonia',alias:['এমোনিয়া','ammonia gas','অ্যামোনিয়া'],type:'হাইড্রাইড',desc:'একটি N পরমাণুর সঙ্গে তিনটি H পরমাণু যুক্ত থাকে।',use:'সার ও বিভিন্ন রাসায়নিক পদার্থ তৈরিতে ব্যবহৃত হয়।',kind:'সমযোজী অণু',reaction:'N₂ + 3H₂ ⇌ 2NH₃'},
+{f:'HCl',bn:'হাইড্রোজেন ক্লোরাইড',en:'Hydrogen chloride',alias:['হাইড্রোক্লোরিক অ্যাসিড','হাইড্রোক্লোরিক এসিড','hydrochloric acid','hydrogen chloride','এইচসিএল'],type:'অম্লীয় যৌগ (দ্রবণে)',desc:'একটি H ও একটি Cl পরমাণু দিয়ে গঠিত। পানিতে দ্রবীভূত HCl-কে হাইড্রোক্লোরিক অ্যাসিড বলা হয়।',use:'পরীক্ষাগার ও শিল্পে ব্যবহৃত হয়।',kind:'সমযোজী অণু',reaction:'H₂ + Cl₂ → 2HCl',caution:'ঘন হাইড্রোক্লোরিক অ্যাসিড ক্ষয়কারী; গন্ধ নেওয়া বা হাতে স্পর্শ করা বিপজ্জনক।'},
+{f:'H2SO4',bn:'সালফিউরিক অ্যাসিড',en:'Sulfuric acid',alias:['সালফিউরিক এসিড','গন্ধকের অম্ল','sulphuric acid','sulfuric acid'],type:'অম্ল',desc:'দুটি H, একটি S এবং চারটি O পরমাণু দিয়ে অণুটি গঠিত।',use:'ব্যাটারি ও রাসায়নিক শিল্পে গুরুত্বপূর্ণ।',kind:'অম্ল',reaction:'SO₃ + H₂O → H₂SO₄',caution:'ঘন সালফিউরিক অ্যাসিড অত্যন্ত ক্ষয়কারী।'},
+{f:'HNO3',bn:'নাইট্রিক অ্যাসিড',en:'Nitric acid',alias:['নাইট্রিক এসিড','nitric acid'],type:'অম্ল',desc:'একটি H, একটি N এবং তিনটি O পরমাণু থাকে।',use:'সার ও রাসায়নিক শিল্পে ব্যবহৃত হয়।',kind:'অম্ল',reaction:'4NO₂ + O₂ + 2H₂O → 4HNO₃ (সামগ্রিক বিক্রিয়ার উদাহরণ)',caution:'নাইট্রিক অ্যাসিড ক্ষয়কারী ও শক্তিশালী জারক।'},
+{f:'CH3COOH',bn:'অ্যাসিটিক অ্যাসিড',en:'Acetic acid',alias:['ইথানোয়িক অ্যাসিড','ইথানয়িক অ্যাসিড','ভিনেগারের অ্যাসিড','ভিনেগার','acetic acid','ethanoic acid'],type:'কার্বক্সিলিক অ্যাসিড',desc:'CH₃COOH-কে গুনলে C = ২, H = ৪, O = ২।',use:'ভিনেগারে পাতলা অ্যাসিটিক অ্যাসিড থাকে; খাদ্য ও রাসায়নিক শিল্পে ব্যবহৃত হয়।',kind:'সমযোজী অণু',reaction:'CH₃COOH + NaOH → CH₃COONa + H₂O'},
+{f:'NaOH',bn:'সোডিয়াম হাইড্রক্সাইড',en:'Sodium hydroxide',alias:['কস্টিক সোডা','caustic soda','সোডিয়াম হাইড্রোক্সাইড','সোডিয়াম হাইড্রক্সাইড'],type:'শক্তিশালী ক্ষার',desc:'একটি Na⁺ আয়ন ও একটি OH⁻ আয়ন থাকে।',use:'সাবান ও কাগজ তৈরিসহ শিল্পে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'Na₂O + H₂O → 2NaOH',caution:'সোডিয়াম হাইড্রক্সাইড ত্বক ও চোখে গুরুতর ক্ষতি করতে পারে।'},
+{f:'KOH',bn:'পটাশিয়াম হাইড্রক্সাইড',en:'Potassium hydroxide',alias:['কস্টিক পটাশ','caustic potash','পটাশিয়াম হাইড্রোক্সাইড'],type:'শক্তিশালী ক্ষার',desc:'একটি K⁺ ও একটি OH⁻ আয়ন দিয়ে গঠিত।',use:'সাবান, ক্ষারীয় দ্রবণ ও শিল্পে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'K₂O + H₂O → 2KOH',caution:'ক্ষয়কারী পদার্থ; সরাসরি স্পর্শ করবেন না।'},
+{f:'Na2CO3',bn:'সোডিয়াম কার্বনেট',en:'Sodium carbonate',alias:['ওয়াশিং সোডা','washing soda','সোডা অ্যাশ','soda ash','সোডিয়াম কার্বোনেট'],type:'কার্বনেট লবণ',desc:'দুটি Na, একটি C এবং তিনটি O পরমাণু আছে।',use:'কাচ, ডিটারজেন্ট ও পানি নরম করার কাজে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2NaHCO₃ —(তাপ)→ Na₂CO₃ + CO₂ + H₂O'},
+{f:'NaHCO3',bn:'সোডিয়াম হাইড্রোজেন কার্বনেট',en:'Sodium hydrogen carbonate',alias:['বেকিং সোডা','খাবার সোডা','baking soda','সোডিয়াম বাইকার্বনেট','sodium bicarbonate'],type:'অম্লীয় কার্বনেট লবণ',desc:'Na, H, C ও O-এর সংখ্যা যথাক্রমে ১, ১, ১ ও ৩।',use:'রান্নায় ফুলাতে, অম্ল নিরপেক্ষ করতে ও পরিষ্কারে ব্যবহার হয়।',kind:'আয়নিক যৌগ',reaction:'2NaHCO₃ —(তাপ)→ Na₂CO₃ + CO₂ + H₂O'},
+{f:'KCl',bn:'পটাশিয়াম ক্লোরাইড',en:'Potassium chloride',alias:['পটাশিয়াম ক্লোরাইড','potassium chloride'],type:'লবণ',desc:'একটি K⁺ ও একটি Cl⁻ আয়নের ১:১ অনুপাতের আয়নিক যৌগ।',use:'সার ও নির্দিষ্ট চিকিৎসা-সংক্রান্ত প্রস্তুতিতে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2K + Cl₂ → 2KCl'},
+{f:'Na2SO4',bn:'সোডিয়াম সালফেট',en:'Sodium sulfate',alias:['সোডিয়াম সালফেট','sodium sulphate'],type:'সালফেট লবণ',desc:'দুটি Na, একটি S ও চারটি O পরমাণু থাকে।',use:'কাচ, কাগজ ও ডিটারজেন্ট শিল্পে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O'},
+{f:'(NH4)2SO4',bn:'অ্যামোনিয়াম সালফেট',en:'Ammonium sulfate',alias:['অ্যামোনিয়াম সালফেট','ammonium sulphate','ammonium sulfate'],type:'সালফেট লবণ',desc:'দুটি NH₄⁺ আয়ন ও একটি SO₄²⁻ আয়ন আছে; মোট N₂H₈SO₄।',use:'নাইট্রোজেন ও সালফারযুক্ত সার হিসেবে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2NH₃ + H₂SO₄ → (NH₄)₂SO₄'},
+{f:'MgO',bn:'ম্যাগনেসিয়াম অক্সাইড',en:'Magnesium oxide',alias:['ম্যাগনেশিয়াম অক্সাইড','magnesium oxide'],type:'ধাতব অক্সাইড',desc:'একটি Mg ও একটি O পরমাণু থাকে।',use:'তাপ-সহনশীল ইট ও কিছু শিল্পে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2Mg + O₂ → 2MgO'},
+{f:'MgCO3',bn:'ম্যাগনেসিয়াম কার্বনেট',en:'Magnesium carbonate',alias:['ম্যাগনেশিয়াম কার্বনেট','magnesium carbonate'],type:'কার্বনেট লবণ',desc:'একটি Mg, একটি C ও তিনটি O পরমাণু থাকে।',use:'অ্যান্টাসিড ও শিল্পে ব্যবহারের উদাহরণ আছে।',kind:'আয়নিক যৌগ',reaction:'MgCO₃ —(তাপ)→ MgO + CO₂'},
+{f:'CuCO3',bn:'কপার(II) কার্বনেট',en:'Copper(II) carbonate',alias:['কপার কার্বনেট','কিউপ্রিক কার্বনেট','copper carbonate','তামা কার্বনেট'],type:'কার্বনেট লবণ',desc:'সরল সংকেতে একটি Cu, একটি C ও তিনটি O থাকে। বাস্তবে সাধারণ কপার কার্বনেট প্রায়ই ক্ষারীয় কার্বনেট রূপে পাওয়া যায়।',use:'কপার যৌগের রসায়নে একটি পাঠ্যপুস্তকীয় উদাহরণ।',kind:'যৌগ',reaction:'CuCO₃ —(তাপ)→ CuO + CO₂ (সরল পাঠ্যপুস্তকীয় মডেল)'},
+{f:'CuO',bn:'কপার(II) অক্সাইড',en:'Copper(II) oxide',alias:['কপার অক্সাইড','কিউপ্রিক অক্সাইড','তামা অক্সাইড','copper oxide'],type:'ধাতব অক্সাইড',desc:'একটি Cu ও একটি O পরমাণু থাকে।',use:'সিরামিক ও বিভিন্ন রাসায়নিক কাজে ব্যবহৃত হয়।',kind:'যৌগ',reaction:'2Cu + O₂ → 2CuO'},
+{f:'Fe2O3',bn:'আয়রন(III) অক্সাইড',en:'Iron(III) oxide',alias:['ফেরিক অক্সাইড','লোহার অক্সাইড','iron oxide','আয়রন অক্সাইড'],type:'ধাতব অক্সাইড',desc:'দুটি Fe ও তিনটি O পরমাণু থাকে। Fe-এর জারণ সংখ্যা এখানে +3।',use:'লোহার মরিচায় এই অক্সাইডসহ নানা যৌগ থাকে; রঞ্জক হিসেবেও ব্যবহৃত হয়।',kind:'যৌগ',reaction:'4Fe + 3O₂ → 2Fe₂O₃'},
+{f:'FeO',bn:'আয়রন(II) অক্সাইড',en:'Iron(II) oxide',alias:['ফেরাস অক্সাইড','iron ii oxide'],type:'ধাতব অক্সাইড',desc:'একটি Fe ও একটি O পরমাণু থাকে; Fe-এর জারণ সংখ্যা +2।',use:'ধাতুবিদ্যা ও উপকরণ রসায়নে গুরুত্বপূর্ণ।',kind:'যৌগ',reaction:'2Fe + O₂ → 2FeO (শর্তসাপেক্ষ)'},
+{f:'ZnO',bn:'জিঙ্ক অক্সাইড',en:'Zinc oxide',alias:['দস্তার অক্সাইড','জিংক অক্সাইড','zinc oxide'],type:'ধাতব অক্সাইড',desc:'একটি Zn ও একটি O পরমাণু দিয়ে গঠিত।',use:'কিছু ত্বক-সুরক্ষা ক্রিম, রাবার ও সিরামিকে ব্যবহৃত হয়।',kind:'যৌগ',reaction:'2Zn + O₂ → 2ZnO'},
+{f:'Al2O3',bn:'অ্যালুমিনিয়াম অক্সাইড',en:'Aluminium oxide',alias:['অ্যালুমিনা','alumina','aluminum oxide','অ্যালুমিনিয়াম অক্সাইড'],type:'ধাতব অক্সাইড',desc:'দুটি Al ও তিনটি O পরমাণু থাকে।',use:'অ্যালুমিনিয়াম উৎপাদন ও ঘর্ষণ-প্রতিরোধী উপাদানে ব্যবহৃত হয়।',kind:'যৌগ',reaction:'4Al + 3O₂ → 2Al₂O₃'},
+{f:'SiO2',bn:'সিলিকন ডাই-অক্সাইড',en:'Silicon dioxide',alias:['সিলিকন ডাই অক্সাইড','বালি','কোয়ার্টজ','কোয়ার্টজ','sand','quartz','silica'],type:'অক্সাইড',desc:'একটি Si ও দুটি O পরমাণুর অনুপাত ১:২।',use:'বালি, কোয়ার্টজ ও কাচ তৈরির প্রধান উপাদানগুলোর একটি।',kind:'সমযোজী জালক',reaction:'Si + O₂ → SiO₂'},
+{f:'SO2',bn:'সালফার ডাই-অক্সাইড',en:'Sulfur dioxide',alias:['সালফার ডাই অক্সাইড','সালফার ডাইঅক্সাইড','sulphur dioxide','sulfur dioxide'],type:'অক্সাইড',desc:'একটি S ও দুটি O পরমাণু থাকে।',use:'কিছু শিল্পপ্রক্রিয়ায় ব্যবহৃত হয়; বায়ুদূষকও বটে।',kind:'সমযোজী অণু',reaction:'S + O₂ → SO₂',caution:'সালফার ডাই-অক্সাইড শ্বাসতন্ত্রে জ্বালা সৃষ্টি করতে পারে।'},
+{f:'SO3',bn:'সালফার ট্রাই-অক্সাইড',en:'Sulfur trioxide',alias:['সালফার ট্রাই অক্সাইড','sulfur trioxide','sulphur trioxide'],type:'অক্সাইড',desc:'একটি S ও তিনটি O পরমাণু থাকে।',use:'সালফিউরিক অ্যাসিড তৈরির শিল্পপ্রক্রিয়ায় মধ্যবর্তী পদার্থ।',kind:'সমযোজী অণু',reaction:'2SO₂ + O₂ ⇌ 2SO₃'},
+{f:'NO2',bn:'নাইট্রোজেন ডাই-অক্সাইড',en:'Nitrogen dioxide',alias:['নাইট্রোজেন ডাই অক্সাইড','nitrogen dioxide'],type:'অক্সাইড',desc:'একটি N ও দুটি O পরমাণু থাকে।',use:'বায়ুমণ্ডলীয় রসায়ন ও দূষণ বিষয়ে গুরুত্বপূর্ণ।',kind:'সমযোজী অণু',reaction:'2NO + O₂ → 2NO₂',caution:'নাইট্রোজেন ডাই-অক্সাইড বিষাক্ত বায়ুদূষক।'},
+{f:'H2O2',bn:'হাইড্রোজেন পার-অক্সাইড',en:'Hydrogen peroxide',alias:['হাইড্রোজেন পারঅক্সাইড','হাইড্রোজেন পার অক্সাইড','hydrogen peroxide'],type:'পার-অক্সাইড',desc:'দুটি H ও দুটি O পরমাণু থাকে। এটি পানির (H₂O) থেকে আলাদা যৌগ।',use:'নিয়ন্ত্রিত ঘনত্বে জীবাণুনাশ ও ব্লিচিংয়ের কিছু কাজে ব্যবহৃত হয়।',kind:'সমযোজী অণু',reaction:'2H₂O₂ → 2H₂O + O₂ (ধীর; উপযুক্ত অনুঘটকে দ্রুততর হয়)',caution:'ঘন হাইড্রোজেন পার-অক্সাইড বিপজ্জনক; ত্বক ও চোখের ক্ষতি করতে পারে।'},
+{f:'C6H12O6',bn:'গ্লুকোজ',en:'Glucose',alias:['ডেক্সট্রোজ','glucose','ডেক্সট্রোজ'],type:'কার্বোহাইড্রেট',desc:'একটি গ্লুকোজ অণুতে ৬টি C, ১২টি H ও ৬টি O পরমাণু থাকে।',use:'জীবকোষের গুরুত্বপূর্ণ শক্তির উৎস।',kind:'সমযোজী অণু',reaction:'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O (সামগ্রিক শ্বসন)'},
+{f:'C12H22O11',bn:'সুক্রোজ',en:'Sucrose',alias:['চিনির রাসায়নিক নাম','চিনি','আখের চিনি','table sugar','sucrose'],type:'কার্বোহাইড্রেট',desc:'একটি সুক্রোজ অণুতে ১২টি C, ২২টি H ও ১১টি O পরমাণু থাকে।',use:'সাধারণ খাদ্যচিনি।',kind:'সমযোজী অণু',reaction:'C₁₂H₂₂O₁₁ + H₂O → গ্লুকোজ + ফ্রুক্টোজ (জলীয় বিশ্লেষণ)'},
+{f:'CH4',bn:'মিথেন',en:'Methane',alias:['প্রাকৃতিক গ্যাসের প্রধান উপাদান','methane'],type:'হাইড্রোকার্বন',desc:'একটি C পরমাণুর সঙ্গে চারটি H পরমাণু যুক্ত থাকে।',use:'জ্বালানি ও প্রাকৃতিক গ্যাসের গুরুত্বপূর্ণ উপাদান।',kind:'সমযোজী অণু',reaction:'CH₄ + 2O₂ → CO₂ + 2H₂O'},
+{f:'C2H5OH',bn:'ইথানল',en:'Ethanol',alias:['ইথাইল অ্যালকোহল','ইথাইল এলকোহল','ethyl alcohol','ethanol'],type:'অ্যালকোহল',desc:'C₂H₅OH-কে গুনলে মোট C = ২, H = ৬, O = ১।',use:'দ্রাবক ও শিল্পে ব্যবহার আছে।',kind:'সমযোজী অণু',reaction:'C₂H₄ + H₂O → C₂H₅OH (উপযুক্ত শিল্পশর্তে)'},
+{f:'H2S',bn:'হাইড্রোজেন সালফাইড',en:'Hydrogen sulfide',alias:['হাইড্রোজেন সালফাইড গ্যাস','hydrogen sulphide','hydrogen sulfide'],type:'হাইড্রাইড',desc:'দুটি H ও একটি S পরমাণু থাকে।',use:'কিছু শিল্প ও পরীক্ষাগার রসায়নে গুরুত্বপূর্ণ।',kind:'সমযোজী অণু',reaction:'H₂ + S → H₂S (উপযুক্ত শর্তে)',caution:'হাইড্রোজেন সালফাইড অত্যন্ত বিষাক্ত; গন্ধ শুঁকে শনাক্ত করার চেষ্টা করা যাবে না।'},
+{f:'H3PO4',bn:'ফসফরিক অ্যাসিড',en:'Phosphoric acid',alias:['ফসফরিক এসিড','phosphoric acid'],type:'অম্ল',desc:'তিনটি H, একটি P ও চারটি O পরমাণু দিয়ে গঠিত।',use:'সার ও খাদ্যশিল্পে নিয়ন্ত্রিত প্রয়োগ আছে।',kind:'অম্ল',reaction:'P₄O₁₀ + 6H₂O → 4H₃PO₄'},
+{f:'AgNO3',bn:'সিলভার নাইট্রেট',en:'Silver nitrate',alias:['রুপার নাইট্রেট','রূপার নাইট্রেট','silver nitrate'],type:'নাইট্রেট লবণ',desc:'একটি Ag, একটি N ও তিনটি O পরমাণু থাকে।',use:'পরীক্ষাগারে ক্লোরাইড শনাক্তকরণসহ বিভিন্ন কাজে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'AgNO₃ + NaCl → AgCl↓ + NaNO₃',caution:'সিলভার নাইট্রেট ত্বকে দাগ সৃষ্টি করতে পারে এবং ক্ষতিকর।'},
+{f:'BaSO4',bn:'বেরিয়াম সালফেট',en:'Barium sulfate',alias:['ব্যারিয়াম সালফেট','barium sulphate','barium sulfate'],type:'সালফেট লবণ',desc:'একটি Ba, একটি S ও চারটি O পরমাণু থাকে।',use:'কিছু চিকিৎসা-চিত্রায়ণে নির্দিষ্ট প্রস্তুতি হিসেবে ব্যবহৃত হয়; দ্রবণীয় বেরিয়াম লবণের মতো নয়।',kind:'আয়নিক যৌগ',reaction:'BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2NaCl'},
+{f:'KMnO4',bn:'পটাশিয়াম পারম্যাঙ্গানেট',en:'Potassium permanganate',alias:['পটাশিয়াম পারম্যাঙ্গানেট','পারম্যাঙ্গানেট','potassium permanganate','kmno4'],type:'লবণ',desc:'একটি K, একটি Mn ও চারটি O পরমাণু থাকে।',use:'রসায়ন পরীক্ষাগারে জারক পদার্থ হিসেবে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'জারণ-বিজারণ বিক্রিয়ায় মাধ্যমভেদে বিভিন্ন উৎপাদ তৈরি হতে পারে।',caution:'শক্তিশালী জারক; অপ্রয়োজনীয়ভাবে মেশাবেন না।'},
+{f:'KNO3',bn:'পটাশিয়াম নাইট্রেট',en:'Potassium nitrate',alias:['সাল্টপিটার','saltpeter','পটাশিয়াম নাইট্রেট'],type:'নাইট্রেট লবণ',desc:'একটি K, একটি N ও তিনটি O পরমাণু থাকে।',use:'সার ও বিভিন্ন শিল্পক্ষেত্রে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2KNO₃ —(তাপ)→ 2KNO₂ + O₂ (উপযুক্ত শর্তে)',caution:'এটি জারক পদার্থ; দাহ্য পদার্থের সঙ্গে মেশাবেন না।'},
+{f:'NaNO3',bn:'সোডিয়াম নাইট্রেট',en:'Sodium nitrate',alias:['চিলি সল্টপিটার','sodium nitrate'],type:'নাইট্রেট লবণ',desc:'একটি Na, একটি N ও তিনটি O পরমাণু থাকে।',use:'সার ও শিল্পে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'2NaNO₃ —(তাপ)→ 2NaNO₂ + O₂ (উপযুক্ত শর্তে)'},
+{f:'CaCl2',bn:'ক্যালসিয়াম ক্লোরাইড',en:'Calcium chloride',alias:['ক্যালসিয়াম ক্লোরাইড','calcium chloride'],type:'লবণ',desc:'একটি Ca²⁺ আয়নের সঙ্গে দুটি Cl⁻ আয়ন যুক্ত থাকে।',use:'আর্দ্রতা শোষণ ও রাস্তা বরফমুক্ত করার কাজে ব্যবহার আছে।',kind:'আয়নিক যৌগ',reaction:'CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O'},
+{f:'CaSO4',bn:'ক্যালসিয়াম সালফেট',en:'Calcium sulfate',alias:['জিপসাম','gypsum','প্লাস্টার','calcium sulphate'],type:'সালফেট লবণ',desc:'একটি Ca, একটি S ও চারটি O পরমাণু থাকে; জিপসামে স্ফটিকজলও থাকতে পারে।',use:'জিপসাম ও প্লাস্টার অব প্যারিস সংশ্লিষ্ট কাজে গুরুত্বপূর্ণ।',kind:'আয়নিক যৌগ',reaction:'CaSO₄·2H₂O → CaSO₄·½H₂O + 1½H₂O (উত্তাপে, সরলীকৃত)'},
+{f:'MgCO3',bn:'ম্যাগনেসিয়াম কার্বনেট',en:'Magnesium carbonate',alias:['ম্যাগনেশিয়াম কার্বোনেট'],type:'কার্বনেট লবণ',desc:'একটি Mg, একটি C ও তিনটি O পরমাণু থাকে।',use:'কিছু শিল্প ও ক্রীড়ায় হাত শুকনো রাখার গুঁড়ায় ম্যাগনেসিয়াম কার্বনেট থাকতে পারে।',kind:'আয়নিক যৌগ',reaction:'MgCO₃ —(তাপ)→ MgO + CO₂'},
+{f:'P2O5',bn:'ফসফরাস পেন্টঅক্সাইড (প্রায়োগিক সংকেত)',en:'Phosphorus pentoxide (empirical formula)',alias:['ফসফরাস পেন্টঅক্সাইড','phosphorus pentoxide'],type:'অক্সাইড',desc:'এখানে দেখানো P₂O₅ হলো প্রচলিত প্রায়োগিক সংকেত; আণবিক সূত্র সাধারণত P₄O₁₀ লেখা হয়।',use:'শুষ্ককারী পদার্থ ও ফসফরাস অক্সাইডের রসায়নে পরিচিত।',kind:'সমযোজী যৌগ',reaction:'4P + 5O₂ → 2P₂O₅ (প্রায়োগিক সংকেত ধরে লেখা)'},
+{f:'CuSO4',bn:'কপার(II) সালফেট',en:'Copper(II) sulfate',alias:['কপার সালফেট','নীল তুঁতে','তুঁতে','blue vitriol','copper sulphate'],type:'সালফেট লবণ',desc:'একটি Cu, একটি S ও চারটি O পরমাণু থাকে। স্ফটিক অবস্থায় প্রায়ই CuSO₄·5H₂O দেখা যায়।',use:'পরীক্ষাগার, কৃষি ও শিল্পে নানা প্রয়োগ আছে।',kind:'আয়নিক যৌগ',reaction:'CuO + H₂SO₄ → CuSO₄ + H₂O'},
+{f:'NaClO',bn:'সোডিয়াম হাইপোক্লোরাইট',en:'Sodium hypochlorite',alias:['ব্লিচ','ব্লিচিং দ্রবণ','bleach','sodium hypochlorite'],type:'লবণ',desc:'একটি Na, একটি Cl ও একটি O পরমাণু থাকে।',use:'পাতলা দ্রবণ হিসেবে কিছু জীবাণুনাশক/ব্লিচিং কাজে ব্যবহৃত হয়।',kind:'আয়নিক যৌগ',reaction:'আয়নীয় গঠন: Na⁺ এবং ClO⁻',caution:'অ্যাসিড বা অ্যামোনিয়ার সঙ্গে ব্লিচ মেশাবেন না; বিষাক্ত গ্যাস তৈরি হতে পারে।'},
+{f:'NH4OH',bn:'অ্যামোনিয়াম হাইড্রক্সাইড (জলীয় অ্যামোনিয়া নামে পরিচিত)',en:'Ammonium hydroxide (traditional notation)',alias:['অ্যামোনিয়াম হাইড্রোক্সাইড','ammonium hydroxide','জলীয় অ্যামোনিয়া'],type:'ক্ষারীয় দ্রবণ (প্রচলিত সংকেত)',desc:'NH₄OH নামটি জলীয় অ্যামোনিয়ার জন্য প্রচলিত সরল উপস্থাপন; দ্রবণে মূলত NH₃ ও H₂O-এর ভারসাম্য থাকে।',use:'কিছু পরিষ্কারক ও রাসায়নিক প্রয়োগে জলীয় অ্যামোনিয়া ব্যবহৃত হয়।',kind:'প্রচলিত উপস্থাপন',reaction:'NH₃ + H₂O ⇌ NH₄⁺ + OH⁻',caution:'অ্যামোনিয়ার বাষ্প শ্বাসের জন্য ক্ষতিকর; ব্লিচের সঙ্গে মেশাবেন না।'}
+];
+// Exact duplicate records, if any, are safely de-duplicated below by formula and Bengali name.
+const DATABASE_LIMIT=10000;const DATA=[];const seen=new Map();for(const item of COMPOUNDS){const k=item.f+'|'+item.bn;if(seen.has(k)){const existing=DATA[seen.get(k)];existing.alias=[...new Set([...(existing.alias||[]),...(item.alias||[])])];}else if(DATA.length<DATABASE_LIMIT){seen.set(k,DATA.length);DATA.push({...item,alias:[...(item.alias||[])]})}}
+const SUBS={'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉'};
+function prettyFormula(s){return String(s).replace(/([A-Za-z][a-z]?)(\d+)/g,(_,a,n)=>a+([...n].map(c=>SUBS[c]||c).join(''))).replace(/\)(\d+)/g,(_,n)=>')'+([...n].map(c=>SUBS[c]||c).join('')));}
+function normal(s){return String(s||'').toLocaleLowerCase('bn').normalize('NFC').replace(/[‐‑‒–—-]/g,' ').replace(/[।,.;:!?()[\]{}'"`]/g,' ').replace(/[₀₁₂₃₄₅₆₇₈₉]/g,c=>String('₀₁₂₃₄₅₆₇₈₉'.indexOf(c))).replace(/\s+/g,' ').trim()}
+function canonicalFormula(s){return String(s||'').replace(/[₀₁₂₃₄₅₆₇₈₉]/g,c=>String('₀₁₂₃₄₅₆₇₈₉'.indexOf(c))).replace(/\s+/g,'').replace(/[·•]/g,'·')}
+function levenshtein(a,b){if(a===b)return 0;if(!a)return b.length;if(!b)return a.length;let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let row=[i];for(let j=1;j<=b.length;j++)row[j]=Math.min(row[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=row}return prev[b.length]}
+function scoreText(q,t){q=normal(q);t=normal(t);if(!q||!t)return 0;if(q===t)return 100;if(t.startsWith(q))return 88;if(t.includes(q))return 78;const qt=q.replace(/\s/g,''),tt=t.replace(/\s/g,'');if(tt.includes(qt))return 73;const dist=levenshtein(qt,tt);const ratio=1-dist/Math.max(qt.length,tt.length,1);return ratio>=.58?Math.round(ratio*62):0}
+function scoreItem(q,item){const raw=String(q).trim();const c=canonicalFormula(raw);let sc=0;if(c.toUpperCase()===item.f.toUpperCase())sc=120;const variants=[item.bn,item.en,item.f,...(item.alias||[])];for(const v of variants)sc=Math.max(sc,scoreText(raw,v));return sc}
+function parseFormula(raw){let s=canonicalFormula(raw).replace(/\^(\d+)?[+-]/g,'').replace(/[⁺⁻]/g,'');if(!s||s.length>70||/[·]/.test(s))return null;const re=/[A-Z][a-z]?|\d+|[()\[\]]/g;const tokens=s.match(re);if(!tokens||tokens.join('')!==s)return null;let i=0;function group(end){const out={};while(i<tokens.length&&tokens[i]!==end){const t=tokens[i++];if(t==='('||t==='['){const close=t==='('?')':']';const inner=group(close);if(tokens[i]!==close)throw Error('Unclosed group');i++;const n=/^\d+$/.test(tokens[i]||'')?Number(tokens[i++]):1;for(const [el,count] of Object.entries(inner))out[el]=(out[el]||0)+count*n;}else if(/^[A-Z][a-z]?$/.test(t)){if(!ELEMENTS[t])throw Error('Unknown element');const n=/^\d+$/.test(tokens[i]||'')?Number(tokens[i++]):1;out[t]=(out[t]||0)+n;}else{throw Error('Invalid token')}}return out}try{const counts=group(null);if(i!==tokens.length||!Object.keys(counts).length)return null;return counts}catch(e){return null}}
+function formulaMass(counts){return Object.entries(counts).reduce((sum,[el,n])=>sum+ELEMENTS[el].mass*n,0)}
+function formatBN(n){return new Intl.NumberFormat('bn-BD',{maximumFractionDigits:3}).format(n)}
+function atomsText(counts){return Object.entries(counts).map(([el,n])=>`${ELEMENTS[el].bn} ${formatBN(n)}টি`).join(' + ')}
+function formatFormulaHTML(f){return escapeHTML(prettyFormula(f)).replace(/([₀₁₂₃₄₅₆₇₈₉]+)/g,'<sub>$1</sub>')}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function getCountSummary(counts){return Object.entries(counts).map(([el,n])=>`${el} = ${formatBN(n)}`).join(' · ')}
+function showCompound(item){const counts=parseFormula(item.f);if(!counts){toast('এই সংকেতের গঠন এখন স্বয়ংক্রিয়ভাবে বিশ্লেষণ করা যাচ্ছে না।');return}document.getElementById('resultHeading').textContent='মিল পাওয়া গেছে';const composition=Object.entries(counts).map(([el,n])=>`<div class="element-chip"><div class="el-top"><div class="el-symbol">${escapeHTML(el)}</div><div><div class="el-name">${escapeHTML(ELEMENTS[el].bn)}</div><div class="el-count">${escapeHTML(ELEMENTS[el].en)}</div></div></div><div class="el-count" style="margin-top:9px">পরমাণু: <b>${formatBN(n)}টি</b> · পারমাণবিক সংখ্যা ${formatBN(ELEMENTS[el].z)}</div></div>`).join('');const isElement=Object.keys(counts).length===1&&item.f===Object.keys(counts)[0];const type=escapeHTML(item.type||'যৌগ');const caut=item.caution?`<div class="warning">⚠️ ${escapeHTML(item.caution)}</div>`:'';const html=`<div class="compound-head"><div><h2 class="compound-title">${escapeHTML(item.bn)}</h2><div class="compound-en">${escapeHTML(item.en)}</div><div class="tag-row"><span class="tag">${type}</span><span class="tag">${escapeHTML(item.kind||'রাসায়নিক পদার্থ')}</span><span class="tag">${isElement?'মৌলিক পদার্থ':'রাসায়নিক যৌগ'}</span></div></div><div class="formula-box"><div class="formula-label">রাসায়নিক সংকেত</div><div class="formula chem">${formatFormulaHTML(item.f)}</div></div></div><div class="detail-section"><h3 class="section-title">এই সংকেতটি কীভাবে গঠিত?</h3><div class="explain-box">${escapeHTML(item.desc||'সংকেতের প্রতিটি মৌল ও পরমাণুর সংখ্যা নিচে দেওয়া হলো।')}<div class="formula-line chem">${Object.entries(counts).map(([el,n],idx)=>`${idx?'<span class="plus">+</span>':''}<span>${escapeHTML(el)}${n>1?'<sub>'+n+'</sub>':''}</span>`).join('')}</div><div style="font-size:11px;color:#74809c;margin-top:8px">${escapeHTML(atomsText(counts))}</div></div></div><div class="detail-section"><h3 class="section-title">মৌলভিত্তিক পরমাণুর হিসাব</h3><div class="composition-grid">${composition}</div><div class="note">মনে রাখুন: সংকেতে কোনো মৌলের প্রতীকের পরে সংখ্যা না থাকলে তার পরমাণু ১টি ধরা হয়। বন্ধনীর বাইরে থাকা সংখ্যা বন্ধনীর ভেতরের সব পরমাণুর ক্ষেত্রে গুণ হয়।</div></div><div class="detail-section"><h3 class="section-title">আণবিক / সূত্রক ভর</h3><div class="info-row"><div class="info-box"><div class="info-label">আনুমানিক সূত্রক ভর</div><div class="info-value">${formatBN(formulaMass(counts))} u</div></div><div class="info-box"><div class="info-label">মোট পরমাণু (একটি সূত্র এককে)</div><div class="info-value">${formatBN(Object.values(counts).reduce((a,b)=>a+b,0))}টি</div></div></div><div class="note">আপেক্ষিক পারমাণবিক ভরের প্রচলিত মান ব্যবহার করে হিসাব করা হয়েছে; এটি আনুমানিক। আয়নিক যৌগের ক্ষেত্রে “সূত্রক ভর” বলা অধিক নির্ভুল।</div></div>${item.use?`<div class="detail-section"><h3 class="section-title">ব্যবহার / পরিচিতি</h3><div class="explain-box">${escapeHTML(item.use)}</div></div>`:''}${item.reaction?`<div class="detail-section"><h3 class="section-title">সম্পর্কিত রাসায়নিক সমীকরণ</h3><div class="explain-box"><div class="chem" style="font-size:15px;font-weight:850;color:#30408f">${escapeHTML(item.reaction)}</div><div style="font-size:11px;color:#7b86a0;margin-top:8px">এটি পরিচিত সমীকরণের একটি উদাহরণ; সব পদার্থের ক্ষেত্রে এই সমীকরণই একমাত্র বিক্রিয়া নয়।</div></div></div>`:''}${caut}<div class="search-tools"><button class="mini-btn" id="copyFormula">⧉ সংকেত কপি করুন</button><button class="mini-btn" id="showSimilar">এ ধরনের আরও ফল</button></div>`;document.getElementById('resultBody').innerHTML=html;document.getElementById('resultBody').scrollIntoView({behavior:'smooth',block:'nearest'});document.getElementById('copyFormula').addEventListener('click',()=>copyText(item.f));document.getElementById('showSimilar').addEventListener('click',()=>{document.getElementById('searchInput').value=item.type||item.bn;search(false)});}
+function showUnknownFormula(q,counts){document.getElementById('resultHeading').textContent='সংকেতের গঠন বিশ্লেষণ';const pairs=Object.entries(counts);const html=`<div class="compound-head"><div><h2 class="compound-title">এই সংকেতের বাংলা নাম নিশ্চিত করা যায়নি</h2><div class="compound-en">প্রদত্ত সংকেতের মৌলভিত্তিক গঠন শনাক্ত হয়েছে</div></div><div class="formula-box"><div class="formula-label">আপনার সংকেত</div><div class="formula chem">${formatFormulaHTML(q)}</div></div></div><div class="detail-section"><h3 class="section-title">গঠন বিশ্লেষণ</h3><div class="explain-box">এই সংকেতে নিচের মৌল ও পরমাণুর সংখ্যা পাওয়া গেছে। তবে সঠিক যৌগের নাম, জারণ অবস্থা বা স্থিতিশীলতা নির্ধারণে আলাদা রাসায়নিক তথ্য যাচাই প্রয়োজন।<div class="formula-line chem">${pairs.map(([el,n],i)=>`${i?'<span class="plus">+</span>':''}<span>${escapeHTML(el)}${n>1?'<sub>'+n+'</sub>':''}</span>`).join('')}</div><div style="font-size:11px;color:#74809c;margin-top:8px">${escapeHTML(atomsText(counts))}</div></div></div><div class="detail-section"><h3 class="section-title">মৌলভিত্তিক পরমাণুর হিসাব</h3><div class="composition-grid">${pairs.map(([el,n])=>`<div class="element-chip"><div class="el-top"><div class="el-symbol">${escapeHTML(el)}</div><div><div class="el-name">${escapeHTML(ELEMENTS[el].bn)}</div><div class="el-count">${escapeHTML(ELEMENTS[el].en)}</div></div></div><div class="el-count" style="margin-top:9px">পরমাণু: <b>${formatBN(n)}টি</b></div></div>`).join('')}</div></div><div class="detail-section"><div class="warning">সতর্কতা: শুধু সংকেত পার্স করা মানেই যৌগটি বাস্তবে স্থিতিশীল বা সাধারণভাবে ব্যবহৃত, এমন নয়। নাম নিশ্চিত করতে পাঠ্যবই বা নির্ভরযোগ্য রাসায়নিক উৎস মিলিয়ে নিন।</div></div>`;document.getElementById('resultBody').innerHTML=html;}
+function search(focus=true){const q=document.getElementById('searchInput').value.trim();if(!q){toast('আগে একটি রাসায়নিক নাম বা সংকেত লিখুন।');document.getElementById('searchInput').focus();return}const ranked=DATA.map(item=>({item,score:scoreItem(q,item)})).filter(x=>x.score>=38).sort((a,b)=>b.score-a.score||a.item.bn.localeCompare(b.item.bn,'bn'));if(ranked.length===1|| (ranked.length>0&&ranked[0].score>=95&&(!ranked[1]||ranked[0].score-ranked[1].score>=18))){showCompound(ranked[0].item);return}if(ranked.length){document.getElementById('resultHeading').textContent=`${formatBN(ranked.length)}টি কাছাকাছি ফল`;document.getElementById('resultBody').innerHTML=`<div style="font-weight:800;font-size:14px;margin-bottom:7px">আপনি কি এগুলোর কোনোটি খুঁজছেন?</div><div style="font-size:12px;color:#7e88a0">একটি ফল বেছে নিলে পূর্ণ সংকেত ও গঠন দেখা যাবে।</div><div class="match-list">${ranked.slice(0,9).map((x,i)=>`<button class="match-item" data-item-index="${DATA.indexOf(x.item)}"><span><span class="match-name">${escapeHTML(x.item.bn)}</span><br><span class="match-meta">${escapeHTML(x.item.en)} · ${escapeHTML(x.item.type||'রাসায়নিক পদার্থ')}</span></span><span class="match-formula chem">${formatFormulaHTML(x.item.f)}　›</span></button>`).join('')}</div>`;document.querySelectorAll('[data-item-index]').forEach(btn=>btn.addEventListener('click',()=>showCompound(DATA[Number(btn.dataset.itemIndex)])));return}const counts=parseFormula(q);if(counts){showUnknownFormula(canonicalFormula(q),counts);return}document.getElementById('resultHeading').textContent='কোনো নিশ্চিত মিল পাওয়া যায়নি';document.getElementById('resultBody').innerHTML=`<div class="result-empty"><div style="font-size:38px;margin-bottom:8px">⌕</div><strong>এই নাম বা সংকেতটি খুঁজে পাওয়া যায়নি</strong><div>বানান একটু বদলে লিখুন, ইংরেজি নাম লিখুন, অথবা রাসায়নিক সংকেতটি পরীক্ষা করুন।</div><div style="font-size:11px;margin-top:12px">টিপস: “ম্যাঙ্গানিজ ডাই অক্সাইড”, “MnO₂” বা “mno2” লিখে চেষ্টা করুন।</div></div>`;}
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2300)}
+async function copyText(text){try{await navigator.clipboard.writeText(text);toast('সংকেত কপি হয়েছে: '+text)}catch(e){const input=document.createElement('textarea');input.value=text;document.body.append(input);input.select();document.execCommand('copy');input.remove();toast('সংকেত কপি হয়েছে: '+text)}}
+const quickItems=[['পানি','H₂O'],['খাবার লবণ','NaCl'],['অ্যামোনিয়া','NH₃'],['সোডিয়াম হাইড্রক্সাইড','NaOH'],['চুনাপাথর','CaCO₃'],['বেকিং সোডা','NaHCO₃'],['সালফিউরিক অ্যাসিড','H₂SO₄'],['গ্লুকোজ','C₆H₁₂O₆']];document.getElementById('quickList').innerHTML=quickItems.map(([bn,f])=>`<button class="quick-item" data-query="${escapeHTML(bn)}"><span class="quick-name">${escapeHTML(bn)}</span><span class="quick-formula chem">${escapeHTML(f)}</span></button>`).join('');
+document.querySelectorAll('[data-query]').forEach(btn=>btn.addEventListener('click',()=>{document.getElementById('searchInput').value=btn.dataset.query;search()}));document.getElementById('searchBtn').addEventListener('click',()=>search());document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();search()}});document.getElementById('printBtn').addEventListener('click',()=>window.print());
+
+// Curated reaction library: school-level, balanced equations, and clearly marked conditions.
+const REACTION_DATABASE_LIMIT = 10000;
+const REACTIONS = [
+{n:'পানির গঠন',t:'সংযোজন',q:'পানি হাইড্রোজেন অক্সিজেন',e:'2H₂ + O₂ → 2H₂O',k:'দুটি বিক্রিয়ক থেকে একটি যৌগ; সমীকরণ সাম্য করা।'},
+{n:'পানির তড়িৎ বিশ্লেষণ',t:'বিয়োজন',q:'পানি তড়িৎ বিশ্লেষণ হাইড্রোজেন অক্সিজেন',e:'2H₂O → 2H₂ + O₂',k:'তড়িৎ শক্তির সাহায্যে পানি ভেঙে হাইড্রোজেন ও অক্সিজেন পাওয়া যায়।'},
+{n:'পটাশিয়াম ক্লোরেটের বিয়োজন',t:'বিয়োজন',q:'KClO3 অক্সিজেন ম্যাঙ্গানিজ ডাই অক্সাইড',e:'2KClO₃ —(তাপ, MnO₂ অনুঘটক)→ 2KCl + 3O₂',k:'MnO₂ অনুঘটক; এটি বিক্রিয়ার গতি বাড়ায়। এটি ঘরে করে দেখার পরীক্ষা নয়।'},
+{n:'ক্যালসিয়াম কার্বনেটের তাপীয় বিয়োজন',t:'বিয়োজন',q:'CaCO3 চুনাপাথর কার্বন ডাই অক্সাইড',e:'CaCO₃ —(তাপ)→ CaO + CO₂',k:'একটি যৌগ ভেঙে দুটি পদার্থ তৈরি হয়।'},
+{n:'অ্যামোনিয়াম ক্লোরাইডের উত্তাপে বিচ্ছেদ',t:'বিয়োজন/বিপরীতমুখী',q:'NH4Cl অ্যামোনিয়াম ক্লোরাইড',e:'NH₄Cl ⇌ NH₃ + HCl',k:'স্কুলের সরল উপস্থাপনা; উত্তাপে উৎপন্ন গ্যাস ঠান্ডা হলে আবার NH₄Cl তৈরি করতে পারে।'},
+{n:'ম্যাগনেসিয়ামের দহন',t:'দহন/সংযোজন',q:'ম্যাগনেসিয়াম অক্সিজেন MgO',e:'2Mg + O₂ → 2MgO',k:'অক্সিজেনের সঙ্গে বিক্রিয়া করে ম্যাগনেসিয়াম অক্সাইড হয়।'},
+{n:'কার্বনের সম্পূর্ণ দহন',t:'দহন',q:'কার্বন অক্সিজেন CO2',e:'C + O₂ → CO₂',k:'পর্যাপ্ত অক্সিজেনে সম্পূর্ণ দহনের আদর্শ সমীকরণ।'},
+{n:'কার্বনের অসম্পূর্ণ দহন',t:'দহন',q:'কার্বন অক্সিজেন CO',e:'2C + O₂ → 2CO',k:'অক্সিজেন অপর্যাপ্ত হলে কার্বন মনোক্সাইড তৈরি হতে পারে; CO বিষাক্ত।'},
+{n:'লোহার মরিচা পড়া',t:'জারণ',q:'লোহা মরিচা অক্সিজেন পানি',e:'4Fe + 3O₂ → 2Fe₂O₃  (সরলীকৃত)',k:'বাস্তব মরিচা সাধারণত জলযুক্ত আয়রন(III) অক্সাইড; এই সমীকরণটি সরলীকরণ।'},
+{n:'অ্যাসিড ও ক্ষারের নিরপেক্ষকরণ',t:'নিরপেক্ষকরণ',q:'HCl NaOH লবণ পানি',e:'HCl + NaOH → NaCl + H₂O',k:'অ্যাসিড + ক্ষার → লবণ + পানি (সাধারণ রূপ)।'},
+{n:'ক্যালসিয়াম অক্সাইডে পানি যোগ',t:'সংযোজন',q:'CaO পানি চুন',e:'CaO + H₂O → Ca(OH)₂',k:'তাপ উৎপন্ন হয়; ক্যালসিয়াম অক্সাইড ক্ষয়কারী।'},
+{n:'কার্বন ডাই-অক্সাইড দিয়ে চুনের পানি',t:'অধঃক্ষেপণ',q:'CO2 চুনের পানি CaCO3',e:'Ca(OH)₂ + CO₂ → CaCO₃↓ + H₂O',k:'সাদা ক্যালসিয়াম কার্বনেটের অধঃক্ষেপ তৈরি হয়। অতিরিক্ত CO₂-তে দ্রবণীয় বাইকার্বনেট তৈরি হতে পারে।'},
+{n:'দস্তা ও হাইড্রোক্লোরিক অ্যাসিড',t:'একক প্রতিস্থাপন',q:'Zn HCl হাইড্রোজেন',e:'Zn + 2HCl → ZnCl₂ + H₂↑',k:'ধাতু অ্যাসিড থেকে হাইড্রোজেন প্রতিস্থাপন করে; বাস্তবে উপযুক্ত ঘনত্ব/শর্ত প্রয়োজন।'},
+{n:'সোডিয়াম ও ক্লোরিন',t:'সংযোজন',q:'Na Cl2 খাবার লবণ',e:'2Na + Cl₂ → 2NaCl',k:'সাম্য করা সমীকরণ; সোডিয়াম ও ক্লোরিন অত্যন্ত বিক্রিয়াশীল, ব্যবহারিক পরীক্ষা নয়।'},
+{n:'নাইট্রোজেন থেকে অ্যামোনিয়া',t:'সংযোজন/সাম্যাবস্থা',q:'N2 H2 NH3 অ্যামোনিয়া',e:'N₂ + 3H₂ ⇌ 2NH₃',k:'হ্যাবার প্রক্রিয়ার সামগ্রিক সমীকরণ; শিল্পে নিয়ন্ত্রিত তাপ, চাপ ও অনুঘটক লাগে।'},
+{n:'হাইড্রোজেন পার-অক্সাইডের বিয়োজন',t:'বিয়োজন',q:'H2O2 পানি অক্সিজেন',e:'2H₂O₂ → 2H₂O + O₂',k:'বিয়োজন ঘটে; গতি শর্ত ও অনুঘটকের ওপর নির্ভর করে। ঘন দ্রবণ বিপজ্জনক।'},
+{n:'সোডিয়াম কার্বনেট ও হাইড্রোক্লোরিক অ্যাসিড',t:'অ্যাসিড-কার্বনেট',q:'Na2CO3 HCl CO2',e:'Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂↑',k:'অ্যাসিড + কার্বনেট → লবণ + পানি + কার্বন ডাই-অক্সাইড।'},
+{n:'বেকিং সোডা ও অ্যাসিড',t:'অ্যাসিড-বাইকার্বনেট',q:'NaHCO3 বেকিং সোডা HCl',e:'NaHCO₃ + HCl → NaCl + H₂O + CO₂↑',k:'বুদবুদের মাধ্যমে CO₂ গ্যাস বের হয়।'},
+{n:'সিলভার নাইট্রেট ও সোডিয়াম ক্লোরাইড',t:'দ্বি-প্রতিস্থাপন/অধঃক্ষেপণ',q:'AgNO3 NaCl সাদা অধঃক্ষেপ',e:'AgNO₃ + NaCl → AgCl↓ + NaNO₃',k:'AgCl সাদা অধঃক্ষেপ; দ্রবণে আয়ন বিনিময় ঘটে।'},
+{n:'বেরিয়াম ক্লোরাইড ও সোডিয়াম সালফেট',t:'অধঃক্ষেপণ',q:'BaCl2 Na2SO4 BaSO4',e:'BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2NaCl',k:'বেরিয়াম সালফেটের সাদা অধঃক্ষেপ তৈরি হয়। দ্রবণীয় বেরিয়াম লবণ বিষাক্ত।'},
+{n:'কপার(II) অক্সাইড ও সালফিউরিক অ্যাসিড',t:'নিরপেক্ষকরণ',q:'CuO H2SO4 CuSO4',e:'CuO + H₂SO₄ → CuSO₄ + H₂O',k:'ধাতব অক্সাইড + অ্যাসিড → লবণ + পানি।'},
+{n:'মিথেনের সম্পূর্ণ দহন',t:'দহন',q:'CH4 methane অক্সিজেন',e:'CH₄ + 2O₂ → CO₂ + 2H₂O',k:'পর্যাপ্ত অক্সিজেনে সম্পূর্ণ দহন।'},
+{n:'গ্লুকোজের শ্বসন',t:'জারণ/শ্বসন',q:'গ্লুকোজ শ্বসন অক্সিজেন',e:'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O',k:'কোষীয় শ্বসনের সরল সামগ্রিক সমীকরণ; শক্তিও মুক্ত হয়।'},
+{n:'সালোকসংশ্লেষ',t:'সংযোজন/জৈব',q:'সালোকসংশ্লেষ গ্লুকোজ কার্বন ডাই অক্সাইড',e:'6CO₂ + 6H₂O —(আলো, ক্লোরোফিল)→ C₆H₁₂O₆ + 6O₂',k:'সরল সামগ্রিক সমীকরণ; প্রকৃত প্রক্রিয়া বহু ধাপের।'},
+{n:'কপার অক্সাইডের বিজারণ',t:'জারণ-বিজারণ',q:'CuO H2 Cu',e:'CuO + H₂ → Cu + H₂O',k:'হাইড্রোজেন কপার অক্সাইডকে বিজারিত করে; এটি ধারণাগত সমীকরণ।'},
+{n:'কপার কার্বনেটের তাপীয় বিয়োজন',t:'বিয়োজন',q:'CuCO3 কপার কার্বনেট',e:'CuCO₃ —(তাপ)→ CuO + CO₂',k:'সব কার্বনেট একই তাপমাত্রায় ভাঙে না; শর্ত গুরুত্বপূর্ণ।'},
+{n:'ম্যাগনেসিয়াম কার্বনেটের তাপীয় বিয়োজন',t:'বিয়োজন',q:'MgCO3 ম্যাগনেসিয়াম কার্বনেট',e:'MgCO₃ —(তাপ)→ MgO + CO₂',k:'কার্বনেট থেকে ধাতব অক্সাইড ও কার্বন ডাই-অক্সাইড।'},
+{n:'সালফার ডাই-অক্সাইডের উৎপত্তি',t:'দহন/সংযোজন',q:'S O2 SO2 সালফার',e:'S + O₂ → SO₂',k:'সালফার অক্সিজেনে জ্বলে সালফার ডাই-অক্সাইড তৈরি করে।'},
+{n:'ক্যালসিয়াম ও পানি',t:'একক প্রতিস্থাপন',q:'Ca পানি হাইড্রোজেন',e:'Ca + 2H₂O → Ca(OH)₂ + H₂↑',k:'ক্যালসিয়াম পানির সঙ্গে বিক্রিয়া করে; গ্যাস নির্গত হয়।'},
+{n:'অ্যালুমিনিয়াম ও অক্সিজেন',t:'সংযোজন/জারণ',q:'Al O2 অ্যালুমিনিয়াম অক্সাইড',e:'4Al + 3O₂ → 2Al₂O₃',k:'দুই পাশে Al ও O পরমাণু সমান।'},
+{n:'লোহা ও কপার সালফেট',t:'একক প্রতিস্থাপন',q:'Fe CuSO4 তামা',e:'Fe + CuSO₄ → FeSO₄ + Cu',k:'লোহা কপারের চেয়ে বেশি সক্রিয় হওয়ায় কপারকে প্রতিস্থাপন করে।'},
+{n:'পটাশিয়াম নাইট্রেটের তাপীয় বিয়োজন',t:'বিয়োজন',q:'KNO3 পটাশিয়াম নাইট্রেট',e:'2KNO₃ —(তাপ)→ 2KNO₂ + O₂',k:'উপযুক্ত শর্তে ঘটে; জারক পদার্থের নিরাপত্তা মেনে চলতে হয়।'},
+{n:'অ্যাসিটিক অ্যাসিড ও সোডিয়াম হাইড্রক্সাইড',t:'নিরপেক্ষকরণ',q:'CH3COOH NaOH অ্যাসিটেট',e:'CH₃COOH + NaOH → CH₃COONa + H₂O',k:'দুর্বল অ্যাসিড ও শক্তিশালী ক্ষারের বিক্রিয়া।'},
+{n:'হাইড্রোজেন ও ক্লোরিন',t:'সংযোজন',q:'H2 Cl2 HCl',e:'H₂ + Cl₂ → 2HCl',k:'আলোতে বিক্রিয়া দ্রুত/তীব্র হতে পারে; পরীক্ষা করে দেখার জন্য নয়।'},
+{n:'সোডিয়াম হাইড্রোজেন কার্বনেটের উত্তাপে বিয়োজন',t:'বিয়োজন',q:'NaHCO3 তাপ বেকিং সোডা',e:'2NaHCO₃ —(তাপ)→ Na₂CO₃ + CO₂ + H₂O',k:'বেকিং সোডা উত্তাপে কার্বন ডাই-অক্সাইড ছাড়ে।'},
+{n:'ক্যালসিয়াম হাইড্রক্সাইড ও কার্বন ডাই-অক্সাইড',t:'অধঃক্ষেপণ',q:'চুনের পানি CO2',e:'Ca(OH)₂ + CO₂ → CaCO₃↓ + H₂O',k:'চুনের পানি দুধের মতো সাদা হয়।'}
+];
+REACTIONS.length = Math.min(REACTIONS.length, REACTION_DATABASE_LIMIT);
+const EXCEPTIONS = [
+['দ্বিপরমাণুক মৌল','সাধারণ অবস্থায় H₂, N₂, O₂, F₂, Cl₂, Br₂ ও I₂ দ্বিপরমাণুক রূপে থাকে।'],
+['বন্ধনীর হিসাব','Ca(OH)₂-তে OH-এর বাইরের ₂ দিয়ে O ও H উভয়ই ২টি; বন্ধনীর ভেতরের সংখ্যা গুণ করতে হয়।'],
+['পার-অক্সাইড বনাম অক্সাইড','H₂O₂-তে O₂ অংশ আছে বলে একে O₂ গ্যাস ভাবা যাবে না; এটি আলাদা যৌগ।'],
+['NH₄OH-এর প্রচলিত সংকেত','“অ্যামোনিয়াম হাইড্রক্সাইড” নামটি জলীয় অ্যামোনিয়ার জন্য প্রচলিত সরল রূপ; দ্রবণে NH₃ + H₂O সাম্যাবস্থা থাকে।'],
+['P₂O₅ বনাম P₄O₁₀','P₂O₅ প্রচলিত empirical formula; অণুর সূত্র P₄O₁₀। প্রশ্নে কোনটি চাওয়া হয়েছে খেয়াল করুন।'],
+['অ্যাসিডের নাম ও অবস্থা','HCl গ্যাসের নাম হাইড্রোজেন ক্লোরাইড; পানিতে দ্রবীভূত হলে হাইড্রোক্লোরিক অ্যাসিড বলা হয়।'],
+['জলযুক্ত লবণ','CuSO₄·5H₂O বা CaSO₄·2H₂O-তে ডটের পরের অংশ স্ফটিকজল বোঝায়; সাধারণ পার্সার সবসময় hydrate ধরতে নাও পারে।'],
+['সহগ বনাম নিচের সংখ্যা','2H₂O-তে পানির অণু ২টি;  H₂O-র নিচের ₂ শুধু H-এর সংখ্যা। সাম্য করার সময় নিচের সংখ্যা বদলানো যাবে না।'],
+['কার্বনেটের ব্যতিক্রম','অনেক ধাতব কার্বনেট উত্তাপে অক্সাইড ও CO₂ দেয়, কিন্তু সব কার্বনেট একইভাবে/একই তাপমাত্রায় ভাঙে না।'],
+['অবস্থা ও শর্ত','সমীকরণে তাপ, আলো, অনুঘটক, দ্রবণ ও গ্যাসের অবস্থা ফলকে প্রভাবিত করতে পারে। শুধু সমীকরণ দেখে পরীক্ষামূলক পদ্ধতি অনুসরণ করবেন না।'],
+['জারণ সংখ্যা সবসময় সরল নয়','একটি সংকেত থেকে মৌলের সংখ্যা পাওয়া যায়, কিন্তু সব ক্ষেত্রে জারণ সংখ্যা বা গঠন একা সূত্র দেখে নিশ্চিত করা যায় না।'],
+['সমীকরণ সাম্য করা','রাসায়নিক সমীকরণে প্রতিটি মৌলের মোট পরমাণু সংখ্যা দুই পাশে সমান করতে হবে; চার্জযুক্ত আয়নিক সমীকরণে মোট চার্জও সমান রাখতে হয়।']
+];
+function reactionScore(q,r){const query=normal(q);if(!query)return 0;const text=normal([r.n,r.t,r.q,r.e,r.k].join(' '));let score=scoreText(query,text);for(const part of query.split(' ')){if(part.length>1&&text.includes(part))score+=9;}if(normal(r.t)===query)score+=35;return score;}
+function renderReactions(q=''){const root=document.getElementById('reactionResults');const query=String(q||'').trim();let rows=REACTIONS.map(r=>({r,score:query?reactionScore(query,r):0}));if(query)rows=rows.filter(x=>x.score>=18).sort((a,b)=>b.score-a.score);else rows=[];if(!query){root.innerHTML='<div class="result-empty"><strong>বিক্রিয়ার লাইব্রেরি প্রস্তুত</strong>কোনো বিষয় লিখে অনুসন্ধান করুন।</div>';return}if(!rows.length){root.innerHTML='<div class="result-empty"><strong>নিশ্চিত মিল পাওয়া যায়নি</strong>কাছাকাছি কোনো নাম, সংকেত বা বিক্রিয়ার ধরন লিখে চেষ্টা করুন। ফল না পাওয়া মানেই বিক্রিয়াটি নেই, এমন নয়।</div>';return}root.innerHTML=rows.slice(0,10).map(({r,score},i)=>`<div class="element-chip" style="margin-top:8px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px"><div><div class="el-name">${escapeHTML(r.n)}</div><div class="el-count">${escapeHTML(r.t)} বিক্রিয়া · সম্ভাব্য মিল ${formatBN(Math.min(99,score))}% (আনুমানিক)</div></div><button class="mini-btn" data-copy-reaction="${i}">কপি</button></div><div class="formula-line chem" style="margin-top:12px">${escapeHTML(r.e)}</div><div class="el-count" style="margin-top:7px;line-height:1.7">${escapeHTML(r.k)}</div></div>`).join('');root.querySelectorAll('[data-copy-reaction]').forEach(btn=>btn.addEventListener('click',()=>copyText(rows[Number(btn.dataset.copyReaction)].r.e)));}
+document.getElementById('reactionCount').textContent=`${formatBN(REACTIONS.length)}টি বিক্রিয়া · ${formatBN(EXCEPTIONS.length)}টি ব্যতিক্রম`;
+document.getElementById('exceptionList').innerHTML=EXCEPTIONS.map(([title,desc])=>`<div class="quick-item" style="display:block;cursor:default"><div class="quick-name" style="font-size:13px;margin-bottom:4px">${escapeHTML(title)}</div><div class="el-count" style="font-size:12px;line-height:1.7">${escapeHTML(desc)}</div></div>`).join('');
+document.getElementById('reactionSearchBtn').addEventListener('click',()=>renderReactions(document.getElementById('reactionInput').value));
+document.getElementById('reactionInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderReactions(e.target.value)}});
+// Keep the app's fuzzy compound lookup helpful but cautious: show alternatives for close scores instead of guessing silently.
+
+</script>
+
+<script>
+if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+  });
+}
+</script>
+
+
+<section class="shell equation-tool" aria-labelledby="balanceTitle">
+  <div class="card" style="margin:26px 0;padding:22px;border-radius:22px">
+    <div class="card-head" style="border:0;padding:0 0 10px">
+      <div class="head-title" id="balanceTitle">রাসায়নিক সমীকরণ</div>
+      <div class="head-label">বিক্রিয়া তৈরি ও সাম্য যাচাই</div>
+    </div>
+    <p class="note">বিক্রিয়কের সূত্র লিখলে পরিচিত বিক্রিয়া থাকলে সম্ভাব্য উৎপাদসহ সমীকরণ দেখাবে। সমীকরণ দিলে সেটি সাম্য করার চেষ্টা করবে।</p>
+    <label for="equationInput" class="info-label">বিক্রিয়ক বা রাসায়নিক সমীকরণ</label>
+    <input id="equationInput" type="text" autocomplete="off" spellcheck="false" placeholder="যেমন: H2 + O2 অথবা H2 + O2 -> H2O" style="width:100%;padding:13px 14px;border-radius:12px;margin:6px 0 10px">
+    <button id="balanceBtn" type="button" class="print-button" style="padding:11px 16px;border-radius:12px">বিক্রিয়া তৈরি / সমীকরণ সাম্য করো</button>
+    <div id="balanceResult" class="explain-box" role="status" aria-live="polite" style="margin-top:12px;white-space:pre-wrap">এখানে বিক্রিয়া ও সাম্য করার ফল দেখা যাবে।</div>
+  </div>
+</section>
+<script>
+(() => {
+  const input = document.getElementById('equationInput');
+  const output = document.getElementById('balanceResult');
+  const btn = document.getElementById('balanceBtn');
+  if (!input || !output || !btn) return;
+
+  function parseFormula(formula) {
+    formula = formula.trim().replace(/[\u2080-\u2089]/g, ch => String('₀₁₂₃₄₅₆₇₈₉'.indexOf(ch)));
+    if (!formula || /[.·]/.test(formula)) throw new Error('হাইড্রেট বা ডট-যুক্ত সূত্র এই সরল টুলে সমর্থিত নয়।');
+    let i = 0;
+    function group(endChar) {
+      const atoms = {};
+      while (i < formula.length && formula[i] !== endChar) {
+        if (formula[i] === '(' || formula[i] === '[') {
+          const close = formula[i] === '(' ? ')' : ']'; i++;
+          const inner = group(close);
+          if (formula[i] !== close) throw new Error('বন্ধনী ঠিক নেই।');
+          i++;
+          let digits = ''; while (/\d/.test(formula[i] || '')) digits += formula[i++];
+          const mul = digits ? Number(digits) : 1;
+          for (const [el,n] of Object.entries(inner)) atoms[el] = (atoms[el] || 0) + n * mul;
+        } else {
+          const m = formula.slice(i).match(/^([A-Z][a-z]?)(\d*)/);
+          if (!m) throw new Error('সূত্রটি বুঝতে পারিনি: ' + formula);
+          const el = m[1], n = m[2] ? Number(m[2]) : 1;
+          atoms[el] = (atoms[el] || 0) + n; i += m[0].length;
+        }
+      }
+      return atoms;
+    }
+    const result = group('');
+    if (i !== formula.length || !Object.keys(result).length) throw new Error('রাসায়নিক সূত্রটি পরীক্ষা করো।');
+    return result;
+  }
+  function gcd(a,b){ return b ? gcd(b,a%b) : Math.abs(a); }
+  function lcm(a,b){ return Math.abs(a*b)/gcd(a,b); }
+  function balanceSide(side) {
+    return side.split('+').map(s => s.trim().replace(/^\d+\s*/, '')).filter(Boolean);
+  }
+  function inferReaction(raw) {
+    const compact = s => s.toUpperCase().replace(/[₀₁₂₃₄₅₆₇₈₉]/g, ch => '₀₁₂₃₄₅₆₇₈₉'.indexOf(ch)).replace(/\\s+/g,'').replace(/[()]/g,'');
+    const key = compact(raw).split('+').sort().join('+');
+    const known = {
+      'H2+O2': 'H2 + O2 -> H2O',
+      'FE+CUSO4': 'CuSO4 + Fe -> FeSO4 + Cu',
+      'CUSO4+ZN': 'CuSO4 + Zn -> ZnSO4 + Cu',
+      'AGNO3+NACL': 'AgNO3 + NaCl -> AgCl + NaNO3',
+      'BACL2+NA2SO4': 'BaCl2 + Na2SO4 -> BaSO4 + NaCl',
+      'HCL+NAOH': 'HCl + NaOH -> NaCl + H2O',
+      'ZN+HCL': 'Zn + HCl -> ZnCl2 + H2',
+      'CAO+H2O': 'CaO + H2O -> Ca(OH)2',
+      'NA2O+H2O': 'Na2O + H2O -> NaOH',
+      'CO2+CAOH2': 'CO2 + Ca(OH)2 -> CaCO3 + H2O',
+      'CH4+O2': 'CH4 + O2 -> CO2 + H2O',
+      'C+O2': 'C + O2 -> CO2',
+      'MG+O2': 'Mg + O2 -> MgO',
+      'NA+CL2': 'Na + Cl2 -> NaCl',
+      'KCLO3': 'KClO3 -> KCl + O2'
+    };
+    return known[key] || null;
+  }
+  function balanceEquation(raw) {
+    if (!/[→=]|->/.test(raw)) {
+      const inferred = inferReaction(raw);
+      if (!inferred) throw new Error('এই বিক্রিয়কগুলোর পরিচিত বিক্রিয়া এখনো যোগ করা হয়নি। পূর্ণ সমীকরণটি -> চিহ্নসহ লিখে চেষ্টা করো।');
+      raw = inferred;
+    }
+    const arrow = raw.includes('→') ? '→' : raw.includes('->') ? '->' : raw.includes('=') ? '=' : null;
+    if (!arrow) throw new Error('দুই পাশের মাঝে → বা -> লিখো।');
+    const parts = raw.split(arrow);
+    if (parts.length !== 2) throw new Error('একটি মাত্র বিক্রিয়া-চিহ্ন ব্যবহার করো।');
+    const left = balanceSide(parts[0]), right = balanceSide(parts[1]);
+    const formulas = [...left, ...right];
+    if (formulas.length < 2 || formulas.length > 6) throw new Error('এই সহজ টুলে মোট ২–৬টি পদার্থ সমর্থিত।');
+    const parsed = formulas.map(parseFormula);
+    const elements = [...new Set(parsed.flatMap(x => Object.keys(x)))];
+    if (elements.length > 8) throw new Error('এই সমীকরণটি এই সরল টুলের সীমার বাইরে।');
+    const rows = elements.map(el => parsed.map((obj, idx) => (obj[el] || 0) * (idx < left.length ? 1 : -1)));
+    // Brute-force positive integer coefficients, up to 12, practical for small school equations.
+    const n = formulas.length, coeff = Array(n).fill(1);
+    let solution = null, attempts = 0;
+    function search(pos) {
+      if (solution || attempts > 1800000) return;
+      if (pos === n-1) {
+        attempts++;
+        for (let r=0;r<rows.length;r++) {
+          let sum=0; for(let c=0;c<n;c++) sum += rows[r][c]*coeff[c];
+          if (sum !== 0) return;
+        }
+        let g=coeff.reduce((a,b)=>gcd(a,b),coeff[0]);
+        if (g > 1) return;
+        solution = coeff.slice(); return;
+      }
+      for (let v=1;v<=12;v++) { coeff[pos]=v; search(pos+1); if(solution)return; }
+    }
+    // Fix final coefficient at 1..12 to reduce equivalent solutions.
+    for (let last=1; last<=12 && !solution; last++) { coeff[n-1]=last; search(0); }
+    if (!solution) throw new Error('এই সীমার মধ্যে সমাধান পাওয়া যায়নি। হাতে/বিশ্বস্ত উৎসে যাচাই করো।');
+    const display = (f,c) => (c===1?'':c+' ')+f;
+    const result = solution.slice(0,left.length).map((c,i)=>display(left[i],c)).join(' + ')+' → '+solution.slice(left.length).map((c,i)=>display(right[i],c)).join(' + ');
+    const totals = {};
+    for(const el of elements){
+      let l=0,r=0;
+      left.forEach((f,i)=>l+=(parsed[i][el]||0)*solution[i]);
+      right.forEach((f,i)=>r+=(parsed[left.length+i][el]||0)*solution[left.length+i]);
+      totals[el]=`${el}: বাম ${l}, ডান ${r} ${l===r?'✓':'✗'}`;
+    }
+    return result+'\n\nপরমাণু গণনা:\n'+Object.values(totals).join('\n')+'\n\nসতর্কতা: ফলটি সহজ সূত্রের জন্য গণনামূলক অনুমান। আয়ন, চার্জ, ইলেকট্রন, অবস্থা ও বিক্রিয়ার শর্ত আলাদাভাবে যাচাই করো।';
+  }
+  btn.addEventListener('click', () => {
+    try { output.textContent = balanceEquation(input.value); }
+    catch(e) { output.textContent = 'সমীকরণ সাম্য করা যায়নি: '+e.message; }
+  });
+  input.addEventListener('keydown', e => { if(e.key==='Enter') btn.click(); });
+})();
+</script>
+
+
+<style id="darpan-student-upgrade">
+/* Student-focused compact result layout */
+#reactionLibrary .detail-section:has(#exceptionList){display:none!important}
+#reactionLibrary .card-head .head-title{font-size:18px}
+.bond-open{border:0;border-radius:13px;padding:12px 16px;color:#fff;font-weight:800;background:linear-gradient(120deg,#7c3aed,#2563eb);box-shadow:0 8px 22px #6555db30}
+.valency-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:9px;margin-top:12px}
+.valency-card{border:1px solid #e6eaf4;border-radius:14px;padding:11px;background:#fff;display:flex;align-items:center;gap:9px}
+.valency-dot{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:15px;flex:none;box-shadow:inset 0 -3px 0 #0001}
+.valency-name{font-size:12px;font-weight:800}.valency-value{font-size:11px;color:#697590}
+.bond-modal{position:fixed;inset:0;background:#0a1020cc;z-index:99;display:none;align-items:center;justify-content:center;padding:16px}
+.bond-modal.open{display:flex}.bond-dialog{width:min(760px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:22px;padding:20px;box-shadow:0 24px 90px #0005}
+.bond-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.bond-dialog h2{margin:0;font-size:21px}.bond-close{border:0;background:#eef1f8;border-radius:10px;padding:8px 12px;font-size:18px}
+.bond-canvas{margin-top:15px;background:linear-gradient(140deg,#f7f8ff,#f1fffc);border:1px solid #e2e8f5;border-radius:18px;padding:10px;min-height:240px;display:grid;place-items:center}
+.bond-caption{font-size:13px;color:#596581;margin-top:12px}.atom-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.atom-legend span{border:1px solid #e6eaf4;background:#fff;border-radius:999px;padding:5px 10px;font-size:12px}
+@media(max-width:600px){.bond-dialog{padding:14px}.bond-canvas{min-height:210px}}
+</style>
+<div class="bond-modal" id="bondModal" role="dialog" aria-modal="true" aria-label="হাতের বন্ধন গঠন">
+ <div class="bond-dialog"><div class="bond-dialog-head"><div><div class="head-label">MOLECULE VIEW</div><h2 id="bondModalTitle">অণুর গঠন</h2></div><button class="bond-close" id="bondClose" aria-label="বন্ধ করুন">✕</button></div>
+ <div class="bond-canvas" id="bondCanvas"></div><div class="atom-legend" id="bondLegend"></div><p class="bond-caption" id="bondCaption">রঙিন গোলক পরমাণু এবং রেখা তাদের মধ্যে বন্ধন বোঝায়। এটি শিক্ষামূলক সরল মডেল, বাস্তব মাপের ছবি নয়।</p></div>
+</div>
+<script id="darpan-student-upgrade-js">
+(()=>{
+const valency={H:1,He:0,Li:1,Be:2,B:3,C:4,N:3,O:2,F:1,Ne:0,Na:1,Mg:2,Al:3,Si:4,P:'3, 5',S:'2, 4, 6',Cl:'1, 3, 5, 7',Ar:0,K:1,Ca:2,Fe:'2, 3',Cu:'1, 2',Zn:2,Br:'1, 3, 5, 7',I:'1, 3, 5, 7',Ag:1,Ba:2,Mn:'2, 4, 7'};
+const atomColors={H:'#f8fafc',C:'#374151',N:'#2563eb',O:'#ef4444',S:'#facc15',P:'#f97316',Cl:'#22c55e',F:'#34d399',Na:'#8b5cf6',K:'#a855f7',Ca:'#16a34a',Mg:'#10b981',Fe:'#b45309',Cu:'#c47a44',Zn:'#94a3b8',Br:'#92400e',I:'#7e22ce',Ag:'#cbd5e1',Ba:'#22c55e',Mn:'#7c3aed',Al:'#9ca3af',Si:'#f59e0b',B:'#f472b6',Li:'#d946ef'};
+const valencyBn={H:'হাইড্রোজেন',C:'কার্বন',N:'নাইট্রোজেন',O:'অক্সিজেন',S:'সালফার',P:'ফসফরাস',Cl:'ক্লোরিন',Na:'সোডিয়াম',K:'পটাশিয়াম',Ca:'ক্যালসিয়াম',Mg:'ম্যাগনেসিয়াম',Fe:'লোহা',Cu:'কপার',Zn:'জিঙ্ক',Al:'অ্যালুমিনিয়াম',Si:'সিলিকন',F:'ফ্লোরিন',Br:'ব্রোমিন',I:'আয়োডিন',Ag:'রূপা',Ba:'বেরিয়াম',Mn:'ম্যাঙ্গানিজ',B:'বোরন',Li:'লিথিয়াম',Be:'বেরিলিয়াম'};
+const $=id=>document.getElementById(id);
+function svgBond(item,counts){
+ const f=item.f.replace(/\s/g,''); let nodes=[],lines=[],caption='রেখা দিয়ে পরমাণুর মধ্যে বন্ধন দেখানো হয়েছে।';
+ // Hand-drawn-style Lewis/structural sketches for common school molecules.
+ const preset={H2:{atoms:[['H',160,100],['H',260,100]],bonds:[[160,100,260,100,1]],cap:'H—H: দুটি হাইড্রোজেন পরমাণুর মধ্যে একটি একক বন্ধন।'},O2:{atoms:[['O',155,100],['O',265,100]],bonds:[[155,100,265,100,2]],cap:'O=O: দুটি অক্সিজেন পরমাণুর মধ্যে দ্বিবন্ধন।'},N2:{atoms:[['N',155,100],['N',265,100]],bonds:[[155,100,265,100,3]],cap:'N≡N: দুটি নাইট্রোজেন পরমাণুর মধ্যে ত্রিবন্ধন।'},H2O:{atoms:[['H',135,115],['O',210,80],['H',285,115]],bonds:[[135,115,210,80,1],[210,80,285,115,1]],cap:'H—O—H: অক্সিজেনের সঙ্গে দুটি হাইড্রোজেন একক বন্ধনে যুক্ত।'},CO2:{atoms:[['O',115,100],['C',210,100],['O',305,100]],bonds:[[115,100,210,100,2],[210,100,305,100,2]],cap:'O=C=O: কার্বন দুই পাশে অক্সিজেনের সঙ্গে দ্বিবন্ধন গঠন করে।'},NH3:{atoms:[['N',210,75],['H',130,145],['H',210,165],['H',290,145]],bonds:[[210,75,130,145,1],[210,75,210,165,1],[210,75,290,145,1]],cap:'অ্যামোনিয়ায় একটি নাইট্রোজেনের সঙ্গে তিনটি হাইড্রোজেন একক বন্ধনে যুক্ত।'},CH4:{atoms:[['C',210,105],['H',130,55],['H',290,55],['H',130,160],['H',290,160]],bonds:[[210,105,130,55,1],[210,105,290,55,1],[210,105,130,160,1],[210,105,290,160,1]],cap:'মিথেনে কার্বন চারটি হাইড্রোজেনের সঙ্গে চারটি একক বন্ধন গঠন করে।'},HCl:{atoms:[['H',160,100],['Cl',260,100]],bonds:[[160,100,260,100,1]],cap:'H—Cl: হাইড্রোজেন ও ক্লোরিনের মধ্যে একটি একক বন্ধন।'}};
+ let p=preset[f];
+ if(!p){const els=Object.keys(counts);if(els.length===1&&counts[els[0]]===2&&['H','O','N','F','Cl','Br','I'].includes(els[0]))p=preset[els[0]+'2'];}
+ if(p){nodes=p.atoms;lines=p.bonds;caption=p.cap;} else {
+   // generic flat structural illustration (not orbital/solar-system model)
+   const els=Object.keys(counts); const atoms=[];let x=210,y=110;atoms.push([els[0],x,y]);let remaining=[];for(const el of els)for(let i=0;i<Math.min(counts[el],4);i++)if(!(el===els[0]&&i===0))remaining.push(el);
+   remaining=remaining.slice(0,8);remaining.forEach((el,i)=>{let a=(Math.PI*2*i/Math.max(remaining.length,1))-Math.PI/2;atoms.push([el,210+105*Math.cos(a),110+75*Math.sin(a)]);lines.push([210,110,210+105*Math.cos(a),110+75*Math.sin(a),1]);});nodes=atoms;caption='এই সংকেতের সব পরমাণু ও সঠিক জ্যামিতি এই সরল ছবিতে পুরোপুরি দেখানো সম্ভব নয়। এখানে রঙিন পরমাণু ও সংযোগরেখা শুধু ধারণা বোঝায়; পরিচিত অণুর ক্ষেত্রে নির্দিষ্ট গঠন দেখানো হয়।';
+ }
+ const bonds=lines.map(([x1,y1,x2,y2,order])=>{let dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1,off=4;let out='';for(let k=0;k<order;k++){let d=(k-(order-1)/2)*off;out+=`<line x1="${x1+dy/len*d}" y1="${y1-dx/len*d}" x2="${x2+dy/len*d}" y2="${y2-dx/len*d}" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>`}return out}).join('');
+ const atomSvg=nodes.map(([el,x,y])=>`<circle cx="${x}" cy="${y}" r="27" fill="${atomColors[el]||'#64748b'}" stroke="#ffffff" stroke-width="3"/><text x="${x}" y="${y+6}" font-size="${el.length>1?15:18}" font-weight="900" text-anchor="middle" fill="${['H','O','S','P','F','Cl','Na','K','Ca','Mg','Ag','Al','Si','Br','I','B','Li','Be'].includes(el)?'#fff':'#fff'}">${el}</text>`).join('');
+ return {svg:`<svg viewBox="0 0 420 220" role="img" aria-label="${item.bn} এর সরল বন্ধন চিত্র" style="width:100%;max-width:560px;height:auto">${bonds}${atomSvg}</svg>`,caption};
+}
+window.showBondDiagram=function(item,counts){const m=$('bondModal'),view=svgBond(item,counts);$('bondModalTitle').textContent=item.bn+' ('+item.f+')';$('bondCanvas').innerHTML=view.svg;$('bondCaption').textContent=view.caption+' রঙের মান: H সাদা, C ধূসর/কালো, N নীল, O লাল, S হলুদ, Cl সবুজ।';$('bondLegend').innerHTML=Object.keys(counts).map(el=>`<span><b style="display:inline-block;width:11px;height:11px;border-radius:50%;background:${atomColors[el]||'#64748b'};margin-right:5px;border:1px solid #94a3b8"></b>${el} · ${valencyBn[el]||ELEMENTS[el]?.bn||el}</span>`).join('');m.classList.add('open');};
+$('bondClose').addEventListener('click',()=>$('bondModal').classList.remove('open'));$('bondModal').addEventListener('click',e=>{if(e.target===$('bondModal'))$('bondModal').classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('bondModal').classList.remove('open')});
+// Replace original detailed result with a concise, student-friendly result.
+window.showCompound=function(item){const counts=parseFormula(item.f);if(!counts){toast('এই সংকেতের গঠন বিশ্লেষণ করা যাচ্ছে না।');return}const pairs=Object.entries(counts);const total=pairs.reduce((a,[,n])=>a+n,0);const isElement=pairs.length===1&&item.f===pairs[0][0];const composition=pairs.map(([el,n])=>`<div class="element-chip"><div class="el-top"><div class="el-symbol" style="background:${atomColors[el]||'#64748b'};color:#fff">${escapeHTML(el)}</div><div><div class="el-name">${escapeHTML(ELEMENTS[el].bn)}</div><div class="el-count">${escapeHTML(ELEMENTS[el].en)}</div></div></div><div class="el-count" style="margin-top:8px">পরমাণু: <b>${formatBN(n)}টি</b> · যোজ্যতা: <b>${valency[el]===undefined?'যাচাই প্রয়োজন':valency[el]}</b></div></div>`).join('');const formulaHTML=formatFormulaHTML(item.f);const caut=item.caution?`<div class="warning">⚠️ ${escapeHTML(item.caution)}</div>`:'';const html=`<div class="compound-head"><div><h2 class="compound-title">${escapeHTML(item.bn)}</h2><div class="compound-en">${escapeHTML(item.en)}</div><div class="tag-row"><span class="tag">${escapeHTML(item.type||'রাসায়নিক পদার্থ')}</span><span class="tag">${isElement?'মৌলিক পদার্থ':'রাসায়নিক যৌগ'}</span></div></div><div class="formula-box"><div class="formula-label">রাসায়নিক সংকেত</div><div class="formula chem">${formulaHTML}</div></div></div><div class="detail-section"><h3 class="section-title">পরমাণুর হিসাব ও যোজ্যতা</h3><div class="composition-grid">${composition}</div><div class="info-row" style="margin-top:12px"><div class="info-box"><div class="info-label">মোট পরমাণু</div><div class="info-value">${formatBN(total)}টি</div></div><div class="info-box"><div class="info-label">সূত্রক / আণবিক ভর</div><div class="info-value">${formatBN(formulaMass(counts))} u</div></div></div></div><div class="detail-section"><button class="bond-open" id="openBond">🎨 ক্লিক করে বন্ধন-চিত্র দেখো</button><div class="note">চিত্রে পরমাণু হাতের-বন্ধন/রেখা মডেলে দেখানো হবে; সৌরজগতের মতো কক্ষপথের মডেল নয়।</div></div>${item.use?`<div class="detail-section"><h3 class="section-title">সংক্ষিপ্ত পরিচিতি</h3><div class="explain-box">${escapeHTML(item.use)}</div></div>`:''}${item.reaction?`<div class="detail-section"><h3 class="section-title">সম্পর্কিত সমীকরণ</h3><div class="explain-box"><div class="chem" style="font-size:15px;font-weight:850;color:#30408f">${escapeHTML(item.reaction)}</div></div></div>`:''}${caut}<div class="search-tools"><button class="mini-btn" id="copyFormula">⧉ সংকেত কপি</button><button class="mini-btn" id="showSimilar">এ ধরনের আরও ফল</button></div>`;$('resultHeading').textContent='মিল পাওয়া গেছে';$('resultBody').innerHTML=html;$('openBond').addEventListener('click',()=>window.showBondDiagram(item,counts));$('copyFormula').addEventListener('click',()=>copyText(item.f));$('showSimilar').addEventListener('click',()=>{$('searchInput').value=item.type||item.bn;search(false)});};
+// Simplify section copy and group equation tools under one clear title.
+const reactionHead=document.querySelector('#reactionLibrary .head-title');if(reactionHead)reactionHead.textContent='রাসায়নিক সমীকরণ';const reactionDesc=document.querySelector('#reactionLibrary p');if(reactionDesc)reactionDesc.textContent='বিক্রিয়ার নাম, সংকেত বা সমীকরণের অংশ লিখে খুঁজুন।';const balanceTitle=$('balanceTitle');if(balanceTitle)balanceTitle.textContent='রাসায়নিক সমীকরণ';
+})();
+</script>
+
+</body>
+</html>
